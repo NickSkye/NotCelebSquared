@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5914DD80D76F10CFD35B77C9 /* Pods_CelebritiesSquared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4330F62452D7414F41787FCB /* Pods_CelebritiesSquared.framework */; };
 		CA978FED1D67EBC9000A917F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA978FEC1D67EBC9000A917F /* AppDelegate.swift */; };
 		CA978FEF1D67EBC9000A917F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA978FEE1D67EBC9000A917F /* ViewController.swift */; };
 		CA978FF21D67EBCC000A917F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA978FF01D67EBCC000A917F /* Main.storyboard */; };
@@ -22,9 +23,15 @@
 		F30F7C591D861F3A007861BA /* FourthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F7C581D861F3A007861BA /* FourthScreen.swift */; };
 		F30F7C5B1D861F69007861BA /* FifthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F7C5A1D861F69007861BA /* FifthScreen.swift */; };
 		F30F7C5D1D866150007861BA /* TrialGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F7C5C1D866150007861BA /* TrialGameScreen.swift */; };
-		F365C4001D9233B300240062 /* test_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F365C3FF1D9233B300240062 /* test_video.mp4 */; };
+		F3849B301E0DE06B00EDA4F7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3849B2A1E0DE06B00EDA4F7 /* Bolts.framework */; };
+		F3849B311E0DE06B00EDA4F7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3849B2B1E0DE06B00EDA4F7 /* Parse.framework */; };
+		F3849B321E0DE06B00EDA4F7 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3849B2C1E0DE06B00EDA4F7 /* ParseFacebookUtils.framework */; };
+		F3849B331E0DE06B00EDA4F7 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3849B2D1E0DE06B00EDA4F7 /* ParseFacebookUtilsV4.framework */; };
+		F3849B341E0DE06B00EDA4F7 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3849B2E1E0DE06B00EDA4F7 /* ParseTwitterUtils.framework */; };
+		F3849B351E0DE06B00EDA4F7 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3849B2F1E0DE06B00EDA4F7 /* ParseUI.framework */; };
 		F3F022321DAB0A690036FE88 /* clocks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3F022311DAB0A690036FE88 /* clocks.mp3 */; };
 		F3F022341DAB0BF50036FE88 /* MusicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F022331DAB0BF50036FE88 /* MusicHelper.swift */; };
+		F3F2F7661E18721F00AE8F4B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F3F2F7651E18721F00AE8F4B /* Podfile */; };
 		F3F8C8C81D9A12F800CD7244 /* AfterAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F8C8C71D9A12F800CD7244 /* AfterAnswer.swift */; };
 		F3F8C8CA1D9AEE8100CD7244 /* WhatToWorkOnNow in Resources */ = {isa = PBXBuildFile; fileRef = F3F8C8C91D9AEE8100CD7244 /* WhatToWorkOnNow */; };
 		F3FDA4971D97694500B405DD /* AnswerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FDA4961D97694500B405DD /* AnswerScreen.swift */; };
@@ -49,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4330F62452D7414F41787FCB /* Pods_CelebritiesSquared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CelebritiesSquared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E2CAC69C41C715187903900 /* Pods-CelebritiesSquared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CelebritiesSquared.release.xcconfig"; path = "Pods/Target Support Files/Pods-CelebritiesSquared/Pods-CelebritiesSquared.release.xcconfig"; sourceTree = "<group>"; };
+		A6D2C84F7A08EA9FC8E9E952 /* Pods-CelebritiesSquared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CelebritiesSquared.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CelebritiesSquared/Pods-CelebritiesSquared.debug.xcconfig"; sourceTree = "<group>"; };
 		CA978FE91D67EBC8000A917F /* CelebritiesSquared.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CelebritiesSquared.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA978FEC1D67EBC9000A917F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA978FEE1D67EBC9000A917F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,9 +80,15 @@
 		F30F7C581D861F3A007861BA /* FourthScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthScreen.swift; sourceTree = "<group>"; };
 		F30F7C5A1D861F69007861BA /* FifthScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthScreen.swift; sourceTree = "<group>"; };
 		F30F7C5C1D866150007861BA /* TrialGameScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrialGameScreen.swift; sourceTree = "<group>"; };
-		F365C3FF1D9233B300240062 /* test_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_video.mp4; sourceTree = "<group>"; };
+		F3849B2A1E0DE06B00EDA4F7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		F3849B2B1E0DE06B00EDA4F7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		F3849B2C1E0DE06B00EDA4F7 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		F3849B2D1E0DE06B00EDA4F7 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		F3849B2E1E0DE06B00EDA4F7 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
+		F3849B2F1E0DE06B00EDA4F7 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		F3F022311DAB0A690036FE88 /* clocks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clocks.mp3; sourceTree = "<group>"; };
 		F3F022331DAB0BF50036FE88 /* MusicHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicHelper.swift; sourceTree = "<group>"; };
+		F3F2F7651E18721F00AE8F4B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		F3F8C8C71D9A12F800CD7244 /* AfterAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AfterAnswer.swift; sourceTree = "<group>"; };
 		F3F8C8C91D9AEE8100CD7244 /* WhatToWorkOnNow */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WhatToWorkOnNow; sourceTree = "<group>"; };
 		F3FDA4961D97694500B405DD /* AnswerScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerScreen.swift; sourceTree = "<group>"; };
@@ -84,6 +100,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3849B351E0DE06B00EDA4F7 /* ParseUI.framework in Frameworks */,
+				F3849B311E0DE06B00EDA4F7 /* Parse.framework in Frameworks */,
+				F3849B301E0DE06B00EDA4F7 /* Bolts.framework in Frameworks */,
+				F3849B331E0DE06B00EDA4F7 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				F3849B321E0DE06B00EDA4F7 /* ParseFacebookUtils.framework in Frameworks */,
+				F3849B341E0DE06B00EDA4F7 /* ParseTwitterUtils.framework in Frameworks */,
+				5914DD80D76F10CFD35B77C9 /* Pods_CelebritiesSquared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,15 +127,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5997C7F124CF0D1C82D6E9E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4330F62452D7414F41787FCB /* Pods_CelebritiesSquared.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		678A486627F63496093E0089 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6D2C84F7A08EA9FC8E9E952 /* Pods-CelebritiesSquared.debug.xcconfig */,
+				8E2CAC69C41C715187903900 /* Pods-CelebritiesSquared.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CA978FE01D67EBC6000A917F = {
 			isa = PBXGroup;
 			children = (
+				F3F2F7651E18721F00AE8F4B /* Podfile */,
+				F3849B2A1E0DE06B00EDA4F7 /* Bolts.framework */,
+				F3849B2B1E0DE06B00EDA4F7 /* Parse.framework */,
+				F3849B2C1E0DE06B00EDA4F7 /* ParseFacebookUtils.framework */,
+				F3849B2D1E0DE06B00EDA4F7 /* ParseFacebookUtilsV4.framework */,
+				F3849B2E1E0DE06B00EDA4F7 /* ParseTwitterUtils.framework */,
+				F3849B2F1E0DE06B00EDA4F7 /* ParseUI.framework */,
 				F3F022311DAB0A690036FE88 /* clocks.mp3 */,
-				F365C3FF1D9233B300240062 /* test_video.mp4 */,
 				CA978FEB1D67EBC8000A917F /* CelebritiesSquared */,
 				CA9790001D67EBD4000A917F /* CelebritiesSquaredTests */,
 				CA97900B1D67EBD4000A917F /* CelebritiesSquaredUITests */,
 				CA978FEA1D67EBC8000A917F /* Products */,
+				678A486627F63496093E0089 /* Pods */,
+				5997C7F124CF0D1C82D6E9E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA9790111D67EBD5000A917F /* Build configuration list for PBXNativeTarget "CelebritiesSquared" */;
 			buildPhases = (
+				95E9DA05ABC53B3552BBB5B3 /* [CP] Check Pods Manifest.lock */,
 				CA978FE51D67EBC7000A917F /* Sources */,
 				CA978FE61D67EBC7000A917F /* Frameworks */,
 				CA978FE71D67EBC7000A917F /* Resources */,
+				DC9204953468D247F6BFB7BA /* [CP] Embed Pods Frameworks */,
+				E718924B0A7E1D59E14899D9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -276,7 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F365C4001D9233B300240062 /* test_video.mp4 in Resources */,
+				F3F2F7661E18721F00AE8F4B /* Podfile in Resources */,
 				CA978FF71D67EBCD000A917F /* LaunchScreen.storyboard in Resources */,
 				CA978FF41D67EBCD000A917F /* Assets.xcassets in Resources */,
 				F3F8C8CA1D9AEE8100CD7244 /* WhatToWorkOnNow in Resources */,
@@ -300,6 +351,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		95E9DA05ABC53B3552BBB5B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DC9204953468D247F6BFB7BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CelebritiesSquared/Pods-CelebritiesSquared-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E718924B0A7E1D59E14899D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CelebritiesSquared/Pods-CelebritiesSquared-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CA978FE51D67EBC7000A917F /* Sources */ = {
@@ -464,10 +563,16 @@
 		};
 		CA9790121D67EBD5000A917F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6D2C84F7A08EA9FC8E9E952 /* Pods-CelebritiesSquared.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9KR276P772;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CelebritiesSquared/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -481,10 +586,16 @@
 		};
 		CA9790131D67EBD5000A917F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E2CAC69C41C715187903900 /* Pods-CelebritiesSquared.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9KR276P772;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CelebritiesSquared/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
