@@ -56,7 +56,7 @@ class AfterAnswer: UIViewController {
             youtubeUrl = allVideos[videoCount]
         }
         
-        let localVideo = URL(fileURLWithPath: "/Users/nickhoyt/Downloads/test_video.mp4")
+       // let localVideo = URL(fileURLWithPath: "/Users/nickhoyt/Downloads/test_video.mp4")
         videoView.allowsInlineMediaPlayback = true
         videoView.mediaPlaybackRequiresUserAction = false
         videoView.scrollView.isScrollEnabled = false

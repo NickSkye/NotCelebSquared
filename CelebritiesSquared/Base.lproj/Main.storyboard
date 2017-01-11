@@ -1382,7 +1382,9 @@
                     <navigationItem key="navigationItem" id="FuG-6o-V1R"/>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="answerButt" destination="pqO-1G-ACl" id="OVQ-oJ-VBO"/>
                         <outlet property="celebCharity" destination="RlO-BK-FoJ" id="e6W-Vx-CAZ"/>
+                        <outlet property="lobbyButt" destination="Y8R-Pr-uic" id="LuH-YB-ovW"/>
                         <outlet property="videoView" destination="bEa-as-jyJ" id="MaA-92-5HK"/>
                         <segue destination="cF6-pN-pRe" kind="presentation" identifier="timeOut" id="lq1-8q-BlZ"/>
                     </connections>

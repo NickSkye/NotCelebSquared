@@ -25,6 +25,7 @@ class AnswerScreen: UIViewController {
     var videoCount = 0 
     var passedName = "ERROR"
     var correctAnswerSegue = "A"
+    var player:AVPlayer?
     
     @IBOutlet var answerOne: UILabel!
     
@@ -46,8 +47,8 @@ class AnswerScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         timer = Timer.scheduledTimer(timeInterval: 0.02, target: self, selector: #selector(AnswerScreen.update), userInfo: nil, repeats: true)
-        
-       
+        player?.replaceCurrentItem(with: nil)
+       player?.pause()
         nameLabel.text = tenQuestions[videoCount]
         if(videoCount == 4){
             

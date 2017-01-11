@@ -16,6 +16,12 @@ class ContestOverScreen: UIViewController {
     //var timer = NSTimer()
     var count = 10.00
     var userName = ""
+    
+    @IBOutlet var answerButt: UIButton!
+    
+    @IBOutlet var lobbyButt: UIButton!
+    
+    
     @IBOutlet var celebCharity: UILabel!
     var totalScore = Double()
     //@IBOutlet var nameLabel: UILabel!
@@ -28,44 +34,48 @@ class ContestOverScreen: UIViewController {
     var videoCount = -1 //this var will keep track of which video to play next
     
     var passedName = "ERROR"
+    var player:AVPlayer?
     
     @IBOutlet var timerLabel: UILabel!
     
         override func viewDidLoad() {
             super.viewDidLoad()
            // timer = NSTimer.scheduledTimerWithTimeInterval(0.02, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+            
+            
+            answerButt.isHidden = true
+            lobbyButt.isHidden = true
+            
             if videoCount < 9{
             videoCount += 1
              youtubeUrl = allVideos[videoCount]
             }
-//            if passedName == "Michael Kors" {
-//               youtubeUrl = "https://www.youtube.com/embed/hKkklMJ_4I4"
-//            }
-//            else if passedName == "KimKardashian" {
-//                youtubeUrl = "https://www.youtube.com/embed/4ovpc5B1mvA"
-//            }
-            
-            
-//            if passedName == "Madonna" || passedName == "Channing" || passedName == "KimKardashian" || passedName == "Bon Jovi" || passedName == "Blake Shelton" || passedName == "Rhianna"{
+
                 celebCharity.text = celebrityCharity[videoCount]
-            //}
-//            else{
-//               
-//                    
-//                celebCharity.text = ""
-//            }
-    
-            let localVideo = URL(fileURLWithPath: "/Users/nickhoyt/Downloads/test_video.mp4")
-            videoView.allowsInlineMediaPlayback = true
-            videoView.mediaPlaybackRequiresUserAction = false
-            videoView.scrollView.isScrollEnabled = false
-            videoView.center = self.view.center
-//            videoView.scrollView.contentScaleFactor = 100
-            //videoView.scrollView.center = videoView.center
-            videoView.loadHTMLString("<iframe width=\"\(videoView.frame.width-15)\" height=\"\(videoView.frame.height-15)\" src=\"\(youtubeUrl)&playsinline=1\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: URL(string: youtubeUrl)) //NSURL(string: youtubeUrl)
-           // let firstName = passedName
-           // nameLabel.text = firstName
-            //videoView.loadHTMLString("", baseURL: nil)
+//
+            let videoURL = NSURL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+            player = AVPlayer(url: videoURL! as URL)
+            let playerLayer = AVPlayerLayer(player: player)
+            playerLayer.frame = self.view.bounds
+            self.view.layer.addSublayer(playerLayer)
+            player?.play()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 12) {
+                self.player?.pause()
+                self.answerButt.isHidden = false
+                self.lobbyButt.isHidden = false
+
+            }
+            
+//    
+////            let localVideo = URL(fileURLWithPath: "/Users/nickhoyt/Downloads/test_video.mp4")
+//            videoView.allowsInlineMediaPlayback = true
+//            videoView.mediaPlaybackRequiresUserAction = false
+//            videoView.scrollView.isScrollEnabled = false
+//            videoView.center = self.view.center
+////            videoView.scrollView.contentScaleFactor = 100
+//            //videoView.scrollView.center = videoView.center
+//            videoView.loadHTMLString("<iframe width=\"\(videoView.frame.width)\" height=\"\(videoView.frame.height)\" src=\"\(youtubeUrl)&playsinline=1\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: URL(string: youtubeUrl)) //NSURL(string: youtubeUrl)
+   
             
         }
 
@@ -105,17 +115,31 @@ class ContestOverScreen: UIViewController {
 //      //  performSegueWithIdentifier("timeOut", sender: self)
 //    }
     
-
+    override func viewWillDisappear(_ animated: Bool) {
+        player?.pause()
+        player?.rate = 0.0
+        player?.replaceCurrentItem(with: nil)
+        
+        player = nil
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        player?.pause()
+        player?.replaceCurrentItem(with: nil)
+        player?.rate = 0.0
+        player = nil
+        
         if segue.identifier == "answerEnter" {
             let DestViewController : AnswerScreen = segue.destination as! AnswerScreen
+            
             // doSomething(sender as! UIButton)
+            DestViewController.player = player
             DestViewController.passedName = passedName
             DestViewController.totalScore = totalScore
             DestViewController.videoCount = videoCount
             DestViewController.userName = userName
             videoView.loadHTMLString("", baseURL: nil)
+            
             
         }
     }
