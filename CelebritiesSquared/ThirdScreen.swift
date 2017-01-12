@@ -27,9 +27,9 @@ class ThirdScreen: UITableViewController {
         let calendar = Calendar.current
         let components = (calendar as NSCalendar).components([.day , .month , .year], from: date)
         print(userName)
-        let year =  components.year
-        let month = components.month
-        let day = components.day
+        let year =  components.year!
+        let month = components.month!
+        let day = components.day!
         contestLabel.text = "Celebrities Squared\n" + String(describing: month) + "/" + String(describing: day) + "/" + String(describing: year)
     }
     

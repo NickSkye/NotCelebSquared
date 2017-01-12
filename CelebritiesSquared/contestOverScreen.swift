@@ -45,6 +45,7 @@ class ContestOverScreen: UIViewController {
             
             answerButt.isHidden = true
             lobbyButt.isHidden = true
+            videoView.isHidden = true
             
             if videoCount < 9{
             videoCount += 1
@@ -61,8 +62,9 @@ class ContestOverScreen: UIViewController {
             player?.play()
             DispatchQueue.main.asyncAfter(deadline: .now() + 12) {
                 self.player?.pause()
-                self.answerButt.isHidden = false
-                self.lobbyButt.isHidden = false
+                self.performSegue(withIdentifier: "answerEnter", sender: self)
+          //      self.answerButt.isHidden = false
+          //      self.lobbyButt.isHidden = false
 
             }
             

@@ -159,18 +159,6 @@
                                     <action selector="twitterButton:" destination="cF6-pN-pRe" eventType="touchUpInside" id="a42-iB-xSf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCe-Kv-lRs">
-                                <rect key="frame" x="157" y="543" width="300" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="HP5-nM-8b8"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="OnC-PP-lTK"/>
-                                    <constraint firstAttribute="width" constant="300" id="owf-zw-EsD"/>
-                                </constraints>
-                                <state key="normal" title="Disclaimer"/>
-                                <connections>
-                                    <action selector="disclaimerButton:" destination="cF6-pN-pRe" eventType="touchUpInside" id="mi2-Vj-OXT"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y72-SR-5b2">
                                 <rect key="frame" x="446" y="446" width="60" height="60"/>
                                 <constraints>
@@ -179,6 +167,13 @@
                                 </constraints>
                                 <state key="normal" image="Snapchat_Logo"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCe-Kv-lRs">
+                                <rect key="frame" x="57" y="708" width="300" height="30"/>
+                                <state key="normal" title="Disclaimer"/>
+                                <connections>
+                                    <action selector="disclaimerButton:" destination="cF6-pN-pRe" eventType="touchUpInside" id="mi2-Vj-OXT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -186,8 +181,10 @@
                             <constraint firstItem="Nai-KE-V3I" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" constant="-100" id="48A-RU-Ybt"/>
                             <constraint firstItem="Nai-KE-V3I" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="9Ob-va-w2b"/>
                             <constraint firstItem="Ltf-UH-5nl" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="B2y-kK-YY2"/>
+                            <constraint firstItem="0yO-wI-KdZ" firstAttribute="top" secondItem="oCe-Kv-lRs" secondAttribute="bottom" id="B4F-0g-6sv"/>
                             <constraint firstItem="c9L-Dx-Ytx" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" constant="50" id="B7y-Fn-Mb7"/>
                             <constraint firstItem="c9L-Dx-Ytx" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="CBD-gZ-jiY"/>
+                            <constraint firstItem="0yO-wI-KdZ" firstAttribute="top" secondItem="oCe-Kv-lRs" secondAttribute="bottom" id="EtV-Ad-iar"/>
                             <constraint firstItem="ypP-rr-Hkj" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="GXG-h8-S7A"/>
                             <constraint firstItem="Nai-KE-V3I" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="J7d-zk-Z90"/>
                             <constraint firstItem="JDf-kX-P1c" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="-174" id="KIi-B7-Rqu"/>
@@ -197,8 +194,6 @@
                             <constraint firstItem="ypP-rr-Hkj" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="-248.5" id="T4B-t0-U3d"/>
                             <constraint firstItem="tQT-sc-Ce3" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="UV4-Pc-9hz"/>
                             <constraint firstItem="Ltf-UH-5nl" firstAttribute="width" secondItem="anN-AL-Z8D" secondAttribute="width" id="VxX-zF-mCc"/>
-                            <constraint firstItem="oCe-Kv-lRs" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="Wv9-E3-qIS"/>
-                            <constraint firstItem="oCe-Kv-lRs" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="258" id="Y4t-6t-23f"/>
                             <constraint firstItem="tQT-sc-Ce3" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="-52.5" id="YNi-Ag-u4j"/>
                             <constraint firstItem="Ltf-UH-5nl" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" id="lCx-qN-CIg"/>
                             <constraint firstItem="VmU-ql-I0w" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" id="mWf-Ei-z1y"/>
@@ -210,6 +205,7 @@
                             <constraint firstItem="y72-SR-5b2" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="s6M-ae-eZO"/>
                             <constraint firstItem="Ltf-UH-5nl" firstAttribute="height" secondItem="anN-AL-Z8D" secondAttribute="height" id="tQc-DR-Vtp"/>
                             <constraint firstItem="RSQ-Tj-Eit" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" constant="-30" id="wO6-ga-9W5"/>
+                            <constraint firstItem="oCe-Kv-lRs" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="zFt-8a-42K"/>
                         </constraints>
                     </view>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -247,10 +243,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goldRect" translatesAutoresizingMaskIntoConstraints="NO" id="uGH-kl-9tN">
-                                                    <rect key="frame" x="0.0" y="-8" width="600" height="87.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Nordstroms" translatesAutoresizingMaskIntoConstraints="NO" id="qUH-KE-eZ8">
                                                     <rect key="frame" x="8" y="2" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -280,10 +272,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="silverRect" translatesAutoresizingMaskIntoConstraints="NO" id="w3G-mh-nYQ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Michael Kors" translatesAutoresizingMaskIntoConstraints="NO" id="kwR-aR-jqz">
                                                     <rect key="frame" x="8" y="2" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -313,10 +301,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goldRect" translatesAutoresizingMaskIntoConstraints="NO" id="l2W-ab-iQ8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="85.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Madonna" translatesAutoresizingMaskIntoConstraints="NO" id="AbO-tj-xei">
                                                     <rect key="frame" x="8" y="2" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -346,10 +330,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="silverRect" translatesAutoresizingMaskIntoConstraints="NO" id="OSW-lg-iPg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Yankees" translatesAutoresizingMaskIntoConstraints="NO" id="qV6-jD-zL9">
                                                     <rect key="frame" x="8" y="2" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -379,10 +359,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goldRect" translatesAutoresizingMaskIntoConstraints="NO" id="vgZ-3O-SWb">
-                                                    <rect key="frame" x="0.0" y="-2" width="600" height="81.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ruths Chris" translatesAutoresizingMaskIntoConstraints="NO" id="7rK-IE-h7M">
                                                     <rect key="frame" x="8" y="2" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -412,10 +388,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="silverRect" translatesAutoresizingMaskIntoConstraints="NO" id="LhO-AF-RuH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Amazon Fire Tablet" translatesAutoresizingMaskIntoConstraints="NO" id="zHT-wn-omF">
                                                     <rect key="frame" x="8" y="2" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -445,10 +417,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goldRect" translatesAutoresizingMaskIntoConstraints="NO" id="Grs-ho-fLU">
-                                                    <rect key="frame" x="0.0" y="-3" width="600" height="82.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Channing" translatesAutoresizingMaskIntoConstraints="NO" id="tEV-q2-Cc3">
                                                     <rect key="frame" x="8" y="0.0" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -481,10 +449,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="silverRect" translatesAutoresizingMaskIntoConstraints="NO" id="OCi-Ej-BBb">
-                                                    <rect key="frame" x="0.0" y="-3" width="600" height="82.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="KimKardashian" translatesAutoresizingMaskIntoConstraints="NO" id="PAU-ci-Q2u">
                                                     <rect key="frame" x="8" y="2" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -517,10 +481,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goldRect" translatesAutoresizingMaskIntoConstraints="NO" id="Cp9-F1-FEc">
-                                                    <rect key="frame" x="0.0" y="-2" width="600" height="82.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Play To Win a chance to meet Bon Jovi! Opens at 7:30pm EST 15 Tokens Reserve Your Spot Now" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5P-8U-aWK">
                                                     <rect key="frame" x="90" y="9" width="159" height="63.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -553,10 +513,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="silverRect" translatesAutoresizingMaskIntoConstraints="NO" id="avN-BQ-suQ">
-                                                    <rect key="frame" x="0.0" y="-2" width="600" height="82.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Blake Shelton" translatesAutoresizingMaskIntoConstraints="NO" id="o9V-SE-Cjk">
                                                     <rect key="frame" x="8" y="0.0" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -589,10 +545,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goldRect" translatesAutoresizingMaskIntoConstraints="NO" id="3lL-0r-c2Z">
-                                                    <rect key="frame" x="0.0" y="-2" width="600" height="82.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Play for a Gucci Handbag. Open Now!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8h-9v-mGq">
                                                     <rect key="frame" x="91" y="1" width="134" height="63.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -628,10 +580,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="silverRect" translatesAutoresizingMaskIntoConstraints="NO" id="dyx-Jb-35j">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="82.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Macy's Gift Card" translatesAutoresizingMaskIntoConstraints="NO" id="7k4-Zd-6j7">
                                                     <rect key="frame" x="8" y="2" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -660,10 +608,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goldRect" translatesAutoresizingMaskIntoConstraints="NO" id="xXg-aM-qHv">
-                                                    <rect key="frame" x="0.0" y="-3" width="600" height="82.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Play for a Brand New Range Rover Sport. 2 Tokens Open Now!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajA-wy-Wfb">
                                                     <rect key="frame" x="91" y="8" width="132" height="63.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -696,10 +640,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="silverRect" translatesAutoresizingMaskIntoConstraints="NO" id="TY8-jz-Yn8">
-                                                    <rect key="frame" x="0.0" y="-2" width="600" height="82.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Samsung TV 4639.00" translatesAutoresizingMaskIntoConstraints="NO" id="FuX-3K-fyP">
                                                     <rect key="frame" x="8" y="2" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -732,10 +672,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goldRect" translatesAutoresizingMaskIntoConstraints="NO" id="dot-b3-uuC">
-                                                    <rect key="frame" x="0.0" y="-3" width="600" height="82.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Meet a Celeb" translatesAutoresizingMaskIntoConstraints="NO" id="8wm-JO-hpo">
                                                     <rect key="frame" x="8" y="2" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -768,10 +704,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="silverRect" translatesAutoresizingMaskIntoConstraints="NO" id="f99-l1-9oN">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="82.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bellagio " translatesAutoresizingMaskIntoConstraints="NO" id="P1N-GJ-zRm">
                                                     <rect key="frame" x="8" y="2" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -804,10 +736,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goldRect" translatesAutoresizingMaskIntoConstraints="NO" id="KNF-cd-Lad">
-                                                    <rect key="frame" x="0.0" y="-2" width="600" height="82.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rhianna" translatesAutoresizingMaskIntoConstraints="NO" id="eth-ee-j1h">
                                                     <rect key="frame" x="8" y="2" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -840,10 +768,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="silverRect" translatesAutoresizingMaskIntoConstraints="NO" id="8Gs-MT-uzQ">
-                                                    <rect key="frame" x="0.0" y="-2" width="600" height="82.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IKEA" translatesAutoresizingMaskIntoConstraints="NO" id="tPw-bJ-v3X">
                                                     <rect key="frame" x="8" y="2" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -872,10 +796,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goldRect" translatesAutoresizingMaskIntoConstraints="NO" id="c0t-Ud-GHq">
-                                                    <rect key="frame" x="0.0" y="-3" width="600" height="82.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Starbucks" translatesAutoresizingMaskIntoConstraints="NO" id="cIm-XJ-n0z">
                                                     <rect key="frame" x="8" y="2" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -904,10 +824,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="silverRect" translatesAutoresizingMaskIntoConstraints="NO" id="yb3-iU-1g5">
-                                                    <rect key="frame" x="0.0" y="-2" width="600" height="82.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lexus" translatesAutoresizingMaskIntoConstraints="NO" id="xEG-FZ-VzM">
                                                     <rect key="frame" x="8" y="2" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -940,10 +856,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goldRect" translatesAutoresizingMaskIntoConstraints="NO" id="GjR-fV-rg1">
-                                                    <rect key="frame" x="0.0" y="-3" width="600" height="82.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AMC" translatesAutoresizingMaskIntoConstraints="NO" id="WlB-iK-aZk">
                                                     <rect key="frame" x="8" y="2" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -972,10 +884,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="silverRect" translatesAutoresizingMaskIntoConstraints="NO" id="gxK-3I-HSE">
-                                                    <rect key="frame" x="0.0" y="-2" width="600" height="82.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Louis Vuitton" translatesAutoresizingMaskIntoConstraints="NO" id="css-Sy-W06">
                                                     <rect key="frame" x="8" y="2" width="75" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1351,7 +1259,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlO-BK-FoJ">
-                                <rect key="frame" x="71" y="426" width="300" height="21"/>
+                                <rect key="frame" x="71" y="449" width="300" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="1co-yN-aAh"/>
                                     <constraint firstAttribute="width" constant="300" id="8Rd-za-jxa"/>
@@ -1363,6 +1271,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="pqO-1G-ACl" firstAttribute="top" secondItem="RlO-BK-FoJ" secondAttribute="bottom" id="2SG-S9-NMH"/>
                             <constraint firstItem="pqO-1G-ACl" firstAttribute="centerY" secondItem="AC3-Ho-7EB" secondAttribute="centerY" constant="158.5" id="8Xx-4m-HQP"/>
                             <constraint firstItem="pqO-1G-ACl" firstAttribute="centerX" secondItem="AC3-Ho-7EB" secondAttribute="centerX" id="AYF-jz-RZd"/>
                             <constraint firstItem="bEa-as-jyJ" firstAttribute="centerX" secondItem="AC3-Ho-7EB" secondAttribute="centerX" id="C5d-3H-3Wm"/>
@@ -1372,9 +1281,10 @@
                             <constraint firstItem="z5b-Qy-Bl6" firstAttribute="centerX" secondItem="AC3-Ho-7EB" secondAttribute="centerX" id="Len-Zx-zYq"/>
                             <constraint firstItem="0U1-xy-HuR" firstAttribute="top" secondItem="CM8-ow-VYm" secondAttribute="bottom" constant="8" id="OYw-8V-eRT"/>
                             <constraint firstItem="fga-JA-wNK" firstAttribute="centerX" secondItem="AC3-Ho-7EB" secondAttribute="centerX" id="PUs-Sx-Vme"/>
-                            <constraint firstItem="RlO-BK-FoJ" firstAttribute="centerY" secondItem="AC3-Ho-7EB" secondAttribute="centerY" constant="114.5" id="XGs-AU-0Ad"/>
+                            <constraint firstItem="RlO-BK-FoJ" firstAttribute="centerY" secondItem="AC3-Ho-7EB" secondAttribute="centerY" constant="125" id="XGs-AU-0Ad"/>
                             <constraint firstItem="fga-JA-wNK" firstAttribute="centerY" secondItem="AC3-Ho-7EB" secondAttribute="centerY" constant="-174" id="YKk-up-F5h"/>
                             <constraint firstItem="RlO-BK-FoJ" firstAttribute="centerX" secondItem="AC3-Ho-7EB" secondAttribute="centerX" id="Zv3-Mp-aJ1"/>
+                            <constraint firstItem="pqO-1G-ACl" firstAttribute="top" secondItem="RlO-BK-FoJ" secondAttribute="bottom" id="azf-GT-9aN"/>
                             <constraint firstItem="bEa-as-jyJ" firstAttribute="centerY" secondItem="AC3-Ho-7EB" secondAttribute="centerY" constant="-7" id="hXK-pg-6RO"/>
                             <constraint firstItem="P4p-0Q-XEb" firstAttribute="centerY" secondItem="AC3-Ho-7EB" secondAttribute="centerY" id="ycN-By-AFW"/>
                         </constraints>
@@ -2289,10 +2199,10 @@
         <image name="silverRect" width="2448" height="2448"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ygB-pH-wdk"/>
-        <segue reference="96b-ws-aBb"/>
         <segue reference="lq1-8q-BlZ"/>
         <segue reference="qCn-et-1H3"/>
         <segue reference="rsc-Me-kpv"/>
+        <segue reference="96b-ws-aBb"/>
+        <segue reference="ygB-pH-wdk"/>
     </inferredMetricsTieBreakers>
 </document>
