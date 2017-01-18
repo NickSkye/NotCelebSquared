@@ -94,6 +94,7 @@ class ThirdScreen: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        MusicHelper.sharedHelper.stopBackgroundMusic()
         if segue.identifier == "backMain" {
             var DestViewController : SecondScreen = segue.destination as! SecondScreen
            // doSomething(sender as! UIButton)

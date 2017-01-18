@@ -49,6 +49,7 @@ class AnswerScreen: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 0.02, target: self, selector: #selector(AnswerScreen.update), userInfo: nil, repeats: true)
         player?.replaceCurrentItem(with: nil)
        player?.pause()
+        player = nil
         nameLabel.text = tenQuestions[videoCount]
         if(videoCount == 4){
             

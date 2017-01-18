@@ -15,16 +15,19 @@ class AfterAnswer: UIViewController {
     // @IBOutlet var videoView: UIWebView!
     
     
-    @IBOutlet var videoView: UIWebView!
+   // @IBOutlet var videoView: UIWebView!
     
   //  var timer = NSTimer()
   //  var count = 10.00
+     var timer = Timer()
+    var count = 3
     
-    @IBOutlet var timerLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
+ //   @IBOutlet var timerLabel: UILabel!
     var userName = ""
-    @IBOutlet var scoreLabel: UILabel!
+  //  @IBOutlet var scoreLabel: UILabel!
     var totalScore = Double()
-    @IBOutlet var nameLabel: UILabel!
+ //   @IBOutlet var nameLabel: UILabel!
     var passedName = "ERROR"
     var passedAnswerBool = false
     var videoCount = 0 
@@ -42,14 +45,9 @@ class AfterAnswer: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // timer = NSTimer.scheduledTimerWithTimeInterval(0.02, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+       
         
-//        if passedName == "Michael Kors" {
-//            youtubeUrl = "https://www.youtube.com/embed/hKkklMJ_4I4"
-//        }
-//        else if passedName == "KimKardashian" {
-//            youtubeUrl = "https://www.youtube.com/embed/4ovpc5B1mvA"
-//        }
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AfterAnswer.update), userInfo: nil, repeats: true)
         
         if videoCount < 10{
            // videoCount++
@@ -57,21 +55,42 @@ class AfterAnswer: UIViewController {
         }
         
        // let localVideo = URL(fileURLWithPath: "/Users/nickhoyt/Downloads/test_video.mp4")
-        videoView.allowsInlineMediaPlayback = true
+/*        videoView.allowsInlineMediaPlayback = true
         videoView.mediaPlaybackRequiresUserAction = false
         videoView.scrollView.isScrollEnabled = false
         videoView.loadHTMLString("<iframe width=\"\(videoView.frame.width-15)\" height=\"\(videoView.frame.height-15)\" src=\"\(youtubeUrl)?&playsinline=1\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: URL(string: youtubeUrl)) //NSURL(string: youtubeUrl)
-        
-        if passedAnswerBool {
+      */
+ /*       if passedAnswerBool {
             nameLabel.text = "CORRECT"
             
         }
         else {
             nameLabel.text = "WRONG"
         }
-        scoreLabel.text = String((Double(round(1000*totalScore)/1000))) + " out of a possible " + String((videoCount+1) * 10) + " points."
+ */
+       // scoreLabel.text = String((Double(round(1000*totalScore)/1000))) + " out of a possible " + String((videoCount+1) * 10) + " points."
         
     }
+    
+    func update() {
+        
+        if(count > 0)
+        {
+            
+            timeLabel.text = String(count)
+            count = count - 1
+        } else {
+            timer.invalidate()
+            if(videoCount == 9){
+                performSegue(withIdentifier: "lastQuestion", sender: self)
+            }
+            else{
+                performSegue(withIdentifier: "notLast", sender: self)
+            }
+            //           let Second:UIViewController = SecondScreen()
+            ////
+            //           self.presentViewController(Second, animated: true, completion: nil) // this one line performs segue
+        }}
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "lastQuestion" {
@@ -79,7 +98,7 @@ class AfterAnswer: UIViewController {
             // doSomething(sender as! UIButton)
             DestViewController.totalScore = totalScore
             DestViewController.userName = userName
-            videoView.loadHTMLString("", baseURL: nil)
+            //videoView.loadHTMLString("", baseURL: nil)
             
         }
         if segue.identifier == "notLast" {
@@ -87,7 +106,7 @@ class AfterAnswer: UIViewController {
             DestViewController.videoCount = videoCount
             DestViewController.totalScore = totalScore
             DestViewController.userName = userName
-            videoView.loadHTMLString("", baseURL: nil)
+          //  videoView.loadHTMLString("", baseURL: nil)
         }
     }
     
@@ -98,7 +117,7 @@ class AfterAnswer: UIViewController {
         super.didReceiveMemoryWarning()
     }
         
-        @IBAction func nextQuestion(_ sender: AnyObject) {
+ /*       @IBAction func nextQuestion(_ sender: AnyObject) {
             print(videoCount)
             if videoCount == 9 {
                 performSegue(withIdentifier: "lastQuestion", sender: self)
@@ -108,32 +127,7 @@ class AfterAnswer: UIViewController {
             }
            // performSegueWithIdentifier("lastQuestion", sender: self)
         }
-//    func update() {
-//        
-//        if(count > 0)
-//        {
-//            
-//            timerLabel.text = String(format: "%.02f",count)
-//            count = count - 0.02
-//        } else {
-//            timer.invalidate()
-//            performSegueWithIdentifier("timeOut", sender: self)
-//            //           let Second:UIViewController = SecondScreen()
-//            ////
-//            //           self.presentViewController(Second, animated: true, completion: nil) // this one line performs segue
-//        }}
-    
-
-    //    @IBAction func yesButton(sender: AnyObject) {
-    //        timerLabel.text = String(format: "%.02f",count)
-    //        timer.invalidate()
-    //        //  performSegueWithIdentifier("timeOut", sender: self)
-    //    }
-    
-    //    @IBAction func noButton(sender: AnyObject) {
-    //        timer.invalidate()
-    //        timerLabel.text = "10.00"
-    //    }
+*/
     
     }
     
