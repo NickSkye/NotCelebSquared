@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -199,7 +199,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IfW-0C-Xhu">
-                                <rect key="frame" x="20" y="103" width="374" height="30"/>
+                                <rect key="frame" x="20" y="133" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="2ly-cJ-wjZ"/>
                                     <constraint firstAttribute="height" constant="30" id="kAp-SU-PUA"/>
@@ -209,7 +209,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rfD-kJ-ECb">
-                                <rect key="frame" x="20" y="141" width="374" height="30"/>
+                                <rect key="frame" x="20" y="171" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="lpf-7F-nJ2"/>
                                     <constraint firstAttribute="width" constant="374" id="yuf-9q-XAh"/>
@@ -219,7 +219,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GiQ-DV-o11">
-                                <rect key="frame" x="20" y="179" width="374" height="30"/>
+                                <rect key="frame" x="20" y="209" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="O0A-Re-JVF"/>
                                     <constraint firstAttribute="height" constant="30" id="fVF-gO-iKc"/>
@@ -229,7 +229,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IKY-Cn-pg9">
-                                <rect key="frame" x="20" y="217" width="374" height="30"/>
+                                <rect key="frame" x="20" y="247" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="DKV-4h-fL3"/>
                                     <constraint firstAttribute="width" constant="374" id="P9A-rz-rOc"/>
@@ -239,7 +239,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SSd-yh-mJg">
-                                <rect key="frame" x="20" y="255" width="374" height="30"/>
+                                <rect key="frame" x="20" y="285" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9YY-TG-oJ9"/>
                                     <constraint firstAttribute="width" constant="374" id="ebm-dL-bTJ"/>
@@ -249,7 +249,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwg-tg-xBI">
-                                <rect key="frame" x="167" y="293" width="81" height="35"/>
+                                <rect key="frame" x="167" y="323" width="81" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Qd5-dF-zj0"/>
                                     <constraint firstAttribute="width" constant="81" id="tk7-vc-YlV"/>
@@ -267,6 +267,21 @@
                                     <segue destination="HKI-vW-IvW" kind="modal" id="4oM-Xg-bxe"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QYT-cS-vxl">
+                                <rect key="frame" x="20" y="64" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" hint="First"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5CM-FH-PYv">
+                                <rect key="frame" x="20" y="102" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -302,6 +317,8 @@
                     <connections>
                         <outlet property="confirmPasswordField" destination="GiQ-DV-o11" id="crg-AZ-qDh"/>
                         <outlet property="emailField" destination="IKY-Cn-pg9" id="mUu-MH-I8J"/>
+                        <outlet property="first" destination="QYT-cS-vxl" id="9a9-ZP-uVF"/>
+                        <outlet property="last" destination="5CM-FH-PYv" id="zFq-N0-OiG"/>
                         <outlet property="passwordField" destination="rfD-kJ-ECb" id="cZC-vu-KId"/>
                         <outlet property="phoneField" destination="SSd-yh-mJg" id="82u-SA-N7V"/>
                         <outlet property="usernameField" destination="IfW-0C-Xhu" id="k1O-U9-Ojx"/>
@@ -309,7 +326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJG-Ln-jE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1328" y="-1099"/>
+            <point key="canvasLocation" x="-1328.985507246377" y="-1099.7282608695652"/>
         </scene>
         <!--Second Screen-->
         <scene sceneID="ZTe-cJ-4dG">
@@ -2392,11 +2409,11 @@
         <image name="silverRect" width="2448" height="2448"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6P8-ve-YTA"/>
-        <segue reference="rsc-Me-kpv"/>
-        <segue reference="4oM-Xg-bxe"/>
         <segue reference="JUY-8U-bE7"/>
+        <segue reference="4oM-Xg-bxe"/>
         <segue reference="96b-ws-aBb"/>
         <segue reference="ygB-pH-wdk"/>
+        <segue reference="6P8-ve-YTA"/>
+        <segue reference="rsc-Me-kpv"/>
     </inferredMetricsTieBreakers>
 </document>
