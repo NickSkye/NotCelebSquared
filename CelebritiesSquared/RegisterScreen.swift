@@ -27,7 +27,7 @@ class RegisterScreen: UIViewController {
     @IBOutlet var emailField: UITextField!
     
     @IBOutlet var phoneField: UITextField!
-    
+    var responseString = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,8 +68,8 @@ class RegisterScreen: UIViewController {
                 print("response = \(response)")
             }
             
-            let responseString = String(data: data, encoding: .utf8)
-            print("responseString = \(responseString)")
+            self.responseString = String(data: data, encoding: .utf8)!
+            print("responseString = \(self.responseString)")
             
         }
         task.resume()
@@ -85,11 +85,39 @@ class RegisterScreen: UIViewController {
         //change segue to programattically seque if registration passes
         
         postToServerFunction()
+        if(true){ //put if username = username from db and password = password from db then it does segue.
+            performSegue(withIdentifier: "registerSegue", sender: self)
+            
+        }
+        else {
+            let alert=UIAlertController(title: "Oops!", message: "Some items appear not to be filled out :(", preferredStyle: UIAlertControllerStyle.alert);
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil));
+            //show it
+            show(alert, sender: self);
+            /*
+            let Alert:UIAlertView = UIAlertView(title: "Oops!", message: "Username or Password is incorrect", delegate: self, cancelButtonTitle: "OK")
+            Alert.show()
+             */
+            
+        }
         
         
         
     }
     
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "registerSegue" {
+            postToServerFunction()
+            let DestViewController : SecondScreen = segue.destination as! SecondScreen
+            // doSomething(sender as! UIButton)
+            
+            DestViewController.userName = usernameField.text!
+        }
+        
+    }
+
     
     
     

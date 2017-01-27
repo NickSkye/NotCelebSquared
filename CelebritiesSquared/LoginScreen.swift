@@ -17,6 +17,9 @@ class LoginScreen: UIViewController {
    
     @IBOutlet var passwordField: UITextField!
     
+    var responseString = ""
+    var allowed = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,19 +57,68 @@ class LoginScreen: UIViewController {
                 print("response = \(response)")
             }
             
-            let responseString = String(data: data, encoding: .utf8)
-            print("responseString = \(responseString)")
+            self.responseString = String(data: data, encoding: .utf8)!
+            print("responseString = \(self.responseString)")
             
         }
+        checkResponseString()
         task.resume()
+        
+        
+        
+        
+        
     }
+    
+    ///////////////////
+    
+    func checkResponseString(){
+        print(allowed)
+        if(responseString == "Success"){
+            allowed = true
+            
+        }
+        else{
+            allowed = false
+        }
+    }
+    
+    ///////////////////
+
     
     @IBAction func loginButton(_ sender: Any) {
         //check with database and change segue to be done programattically so that it confirms the login before going.
-        
         postToServerFunction()
+        print("ALLOWED CHECKED")
+        if(!allowed){ //put if username = username from db and password = password from db then it does segue.
+            let alert=UIAlertController(title: "Oops!", message: "Username or Password is incorrect", preferredStyle: UIAlertControllerStyle.alert);
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil));
+            //show it
+            show(alert, sender: self);
+          
+            
+        }
+        else {
+            
+            performSegue(withIdentifier: "loginSegue", sender: self)
+            
+            
+            
+        }
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "loginSegue" {
+            
+            let DestViewController : SecondScreen = segue.destination as! SecondScreen
+            // doSomething(sender as! UIButton)
+            
+            DestViewController.userName = usernameField.text!
+        }
         
     }
+
     
     
     
