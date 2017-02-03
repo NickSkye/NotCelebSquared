@@ -61,6 +61,22 @@ class SecondScreen: UIViewController {
         UIApplication.shared.openURL(URL(string: "https://twitter.com/CelebsSquared")!)
     }
     
+
+
+    @IBAction func fundraiserButt(_ sender: Any) {
+        
+        print("GAY")
+        performSegue(withIdentifier: "fundraiserLobbySegue", sender: self)
+        
+    }
+    
+    @IBAction func contestButt(_ sender: Any) {
+        performSegue(withIdentifier: "contestLobbySegue", sender: self)
+    }
+    
+    
+   
+    
     @IBAction func tvQualifier(_ sender: AnyObject) {
         let Alert:UIAlertView = UIAlertView(title: "Oops!", message: "You have not earned enough Celebrities Squared Points to open qualifying rounds for a chance to play on the Celebrities Squared TV Game Show :)", delegate: self, cancelButtonTitle: "OK")
         Alert.show()
@@ -74,6 +90,20 @@ class SecondScreen: UIViewController {
     @IBAction func disclaimerButton(_ sender: AnyObject) {
         let Alert:UIAlertView = UIAlertView(title: "Disclaimer", message: "None of the Celebrities or Merchandisers have agreed to participate with Celebrities Squared App in anyway which so ever at this time. This Beta App is for Demonstration Purposes Only. The Celebrities Squared Beta App is not for distribution. As a user you were offered an opportunity to play by Celebrities Squared and only you are to play the Demo Game.", delegate: self, cancelButtonTitle: "OK")
         Alert.show()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "contestLobbySegue" {
+            let DestViewController : ThirdScreen = segue.destination as! ThirdScreen
+            // doSomething(sender as! UIButton)
+            DestViewController.userName = userName
+            
+        }
+        else if segue.identifier == "fundraiserLobbySegue" {
+            let DestViewController : FundraiserScreen = segue.destination as! FundraiserScreen
+            DestViewController.userName = userName
+        }
+        
     }
     
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -90,7 +90,7 @@ class LoginScreen: UIViewController {
         //check with database and change segue to be done programattically so that it confirms the login before going.
         postToServerFunction()
         print("ALLOWED CHECKED")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
         if(self.allowed || self.responseString == "Success"){ //put if username = username from db and password = password from db then it does segue.
             self.performSegue(withIdentifier: "loginSegue", sender: self)
            

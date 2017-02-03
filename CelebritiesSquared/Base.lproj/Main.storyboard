@@ -345,27 +345,17 @@
                                 <rect key="frame" x="-181" y="0.0" width="947" height="738"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoCeleb" translatesAutoresizingMaskIntoConstraints="NO" id="ypP-rr-Hkj">
-                                <rect key="frame" x="71" y="7" width="273" height="89"/>
+                                <rect key="frame" x="65" y="47" width="273" height="89"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoSquareLight" translatesAutoresizingMaskIntoConstraints="NO" id="JDf-kX-P1c">
-                                <rect key="frame" x="87" y="62" width="240" height="128"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdE-qK-lDd">
-                                <rect key="frame" x="128" y="171" width="344" height="45"/>
-                                <state key="normal" image="buttonContestLobby"/>
-                                <connections>
-                                    <segue destination="WP2-0h-zok" kind="presentation" id="eAG-Rc-c0A"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQT-sc-Ce3">
-                                <rect key="frame" x="155" y="224" width="290" height="45"/>
+                                <rect key="frame" x="156" y="293" width="290" height="45"/>
                                 <state key="normal" image="buttonQualifier"/>
                                 <connections>
                                     <action selector="tvQualifier:" destination="cF6-pN-pRe" eventType="touchUpInside" id="efG-UH-Thu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmU-ql-I0w">
-                                <rect key="frame" x="155" y="277" width="290" height="45"/>
+                                <rect key="frame" x="156" y="346" width="290" height="45"/>
                                 <state key="normal" image="buttonHowToPlay"/>
                                 <connections>
                                     <action selector="instructionButt:" destination="cF6-pN-pRe" eventType="touchUpInside" id="Cun-n1-zmr"/>
@@ -421,45 +411,86 @@
                                     <action selector="disclaimerButton:" destination="cF6-pN-pRe" eventType="touchUpInside" id="mi2-Vj-OXT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdE-qK-lDd">
+                                <rect key="frame" x="129" y="240" width="344" height="45"/>
+                                <state key="normal" image="buttonContestLobby"/>
+                                <connections>
+                                    <action selector="contestButt:" destination="cF6-pN-pRe" eventType="touchUpInside" id="igE-Py-cGp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqY-6B-pG9">
+                                <rect key="frame" x="222" y="188" width="159" height="51"/>
+                                <state key="normal" image="buttonMain"/>
+                                <connections>
+                                    <action selector="fundraiserButt:" destination="cF6-pN-pRe" eventType="touchUpInside" id="KrR-hB-bzp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="c9L-Dx-Ytx" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="3fD-cI-d57"/>
                             <constraint firstItem="Nai-KE-V3I" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" constant="-100" id="48A-RU-Ybt"/>
+                            <constraint firstItem="HqY-6B-pG9" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="7ZD-2M-9S4"/>
                             <constraint firstItem="Nai-KE-V3I" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="9Ob-va-w2b"/>
                             <constraint firstItem="Ltf-UH-5nl" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="B2y-kK-YY2"/>
                             <constraint firstItem="0yO-wI-KdZ" firstAttribute="top" secondItem="oCe-Kv-lRs" secondAttribute="bottom" id="B4F-0g-6sv"/>
                             <constraint firstItem="c9L-Dx-Ytx" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" constant="50" id="B7y-Fn-Mb7"/>
+                            <constraint firstItem="HqY-6B-pG9" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="BAe-G5-ef4"/>
                             <constraint firstItem="c9L-Dx-Ytx" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="CBD-gZ-jiY"/>
+                            <constraint firstItem="HqY-6B-pG9" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="CCK-OZ-HTc"/>
                             <constraint firstItem="0yO-wI-KdZ" firstAttribute="top" secondItem="oCe-Kv-lRs" secondAttribute="bottom" id="EtV-Ad-iar"/>
                             <constraint firstItem="ypP-rr-Hkj" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="GXG-h8-S7A"/>
                             <constraint firstItem="Nai-KE-V3I" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="J7d-zk-Z90"/>
-                            <constraint firstItem="JDf-kX-P1c" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="-174" id="KIi-B7-Rqu"/>
                             <constraint firstItem="VmU-ql-I0w" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="KTQ-9p-S2F"/>
                             <constraint firstItem="vdE-qK-lDd" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="-105.5" id="MXt-Ab-PAC"/>
                             <constraint firstItem="RSQ-Tj-Eit" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="RCX-sr-TI6"/>
-                            <constraint firstItem="ypP-rr-Hkj" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="-248.5" id="T4B-t0-U3d"/>
+                            <constraint firstItem="ypP-rr-Hkj" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="-300" id="T4B-t0-U3d"/>
                             <constraint firstItem="tQT-sc-Ce3" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="UV4-Pc-9hz"/>
+                            <constraint firstItem="HqY-6B-pG9" firstAttribute="top" secondItem="KM3-pW-sT2" secondAttribute="bottom" constant="155" id="UzL-mA-OPJ"/>
                             <constraint firstItem="Ltf-UH-5nl" firstAttribute="width" secondItem="anN-AL-Z8D" secondAttribute="width" id="VxX-zF-mCc"/>
                             <constraint firstItem="tQT-sc-Ce3" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="-52.5" id="YNi-Ag-u4j"/>
+                            <constraint firstItem="vdE-qK-lDd" firstAttribute="top" secondItem="HqY-6B-pG9" secondAttribute="bottom" constant="8" id="bN9-L0-O2G"/>
                             <constraint firstItem="Ltf-UH-5nl" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" id="lCx-qN-CIg"/>
                             <constraint firstItem="VmU-ql-I0w" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" id="mWf-Ei-z1y"/>
                             <constraint firstItem="vdE-qK-lDd" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="nPo-u0-FBz"/>
                             <constraint firstItem="c9L-Dx-Ytx" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" constant="35" id="oEa-va-9Dq"/>
                             <constraint firstItem="Nai-KE-V3I" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" constant="-70" id="pNb-Ll-Weg"/>
-                            <constraint firstItem="JDf-kX-P1c" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="r7V-F6-mRm"/>
                             <constraint firstItem="y72-SR-5b2" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" constant="100" id="rbf-bb-0Ew"/>
                             <constraint firstItem="y72-SR-5b2" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="s6M-ae-eZO"/>
                             <constraint firstItem="Ltf-UH-5nl" firstAttribute="height" secondItem="anN-AL-Z8D" secondAttribute="height" id="tQc-DR-Vtp"/>
                             <constraint firstItem="RSQ-Tj-Eit" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" constant="-30" id="wO6-ga-9W5"/>
                             <constraint firstItem="oCe-Kv-lRs" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="zFt-8a-42K"/>
+                            <constraint firstItem="ypP-rr-Hkj" firstAttribute="top" secondItem="KM3-pW-sT2" secondAttribute="bottom" constant="-10" id="zTD-gn-OrG"/>
                         </constraints>
                     </view>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <segue destination="Bvb-Py-9eQ" kind="modal" identifier="contestLobbySegue" id="mO6-CL-4ta"/>
+                        <segue destination="2YI-Yz-Wm6" kind="modal" identifier="fundraiserLobbySegue" id="9Wp-Vg-PvB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qC6-L4-gtc" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1632" y="-342"/>
+            <point key="canvasLocation" x="-988.40579710144937" y="-243.75000000000003"/>
+        </scene>
+        <!--Fundraiser Screen-->
+        <scene sceneID="BMD-9R-W3m">
+            <objects>
+                <viewController id="2YI-Yz-Wm6" customClass="FundraiserScreen" customModule="CelebritiesSquared" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Shs-C8-vZX"/>
+                        <viewControllerLayoutGuide type="bottom" id="mcg-he-Soc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w6O-vF-I1g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ugy-tZ-iOr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6AX-KE-PvQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-472" y="377"/>
         </scene>
         <!--Third Screen-->
         <scene sceneID="owg-wd-cEL">
@@ -2310,9 +2341,6 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Me-2Z-Egs">
                                 <rect key="frame" x="35" y="522" width="344" height="45"/>
                                 <state key="normal" image="buttonMain"/>
-                                <connections>
-                                    <segue destination="cF6-pN-pRe" kind="presentation" id="ASv-LR-K7n"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQH-kO-vv9">
                                 <rect key="frame" x="107" y="227" width="200" height="41"/>
@@ -2345,12 +2373,11 @@
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="userNameField" destination="Z2O-HY-JsZ" id="rzc-mN-vqs"/>
-                        <segue destination="Bvb-Py-9eQ" kind="presentation" identifier="usernameEntered" id="96b-ws-aBb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OXY-3R-iDn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-926" y="-293"/>
+            <point key="canvasLocation" x="-668" y="-1211"/>
         </scene>
     </scenes>
     <resources>
@@ -2413,8 +2440,8 @@
         <segue reference="rsc-Me-kpv"/>
         <segue reference="6P8-ve-YTA"/>
         <segue reference="4oM-Xg-bxe"/>
-        <segue reference="giF-Kt-8Rv"/>
-        <segue reference="96b-ws-aBb"/>
+        <segue reference="mO6-CL-4ta"/>
+        <segue reference="LJ0-Bj-q0Y"/>
         <segue reference="ygB-pH-wdk"/>
     </inferredMetricsTieBreakers>
 </document>
