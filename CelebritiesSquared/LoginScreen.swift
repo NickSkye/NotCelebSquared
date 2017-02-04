@@ -14,7 +14,7 @@ class LoginScreen: UIViewController {
     
     
     @IBOutlet var usernameField: UITextField!
-   
+    
     @IBOutlet var passwordField: UITextField!
     
     var responseString = ""
@@ -64,17 +64,13 @@ class LoginScreen: UIViewController {
         checkResponseString()
         task.resume()
         
-        
-        
-        
-        
     }
     
     ///////////////////
     
     func checkResponseString(){
         print(allowed)
-        if(responseString == "Success"){
+        if(self.responseString == "Success"){
             allowed = true
             
         }
@@ -84,31 +80,29 @@ class LoginScreen: UIViewController {
     }
     
     ///////////////////
-
+    
     
     @IBAction func loginButton(_ sender: Any) {
         //check with database and change segue to be done programattically so that it confirms the login before going.
         postToServerFunction()
         print("ALLOWED CHECKED")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-        if(self.allowed || self.responseString == "Success"){ //put if username = username from db and password = password from db then it does segue.
-            self.performSegue(withIdentifier: "loginSegue", sender: self)
-           
-          
-            
-        }
-        else {
-            
-            let alert=UIAlertController(title: "Oops!", message: "Username or Password is incorrect", preferredStyle: UIAlertControllerStyle.alert);
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil));
-            //show it
-            self.show(alert, sender: self);
-            
-            
-            
-        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            if(self.allowed || self.responseString == "Success"){ //put if username = username from db and password = password from db then it does segue.
+                self.performSegue(withIdentifier: "loginSegue", sender: self)
+                
+            }
+            else {
+                
+                let alert=UIAlertController(title: "Oops!", message: "Username or Password is incorrect", preferredStyle: UIAlertControllerStyle.alert);
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil));
+                //show it
+                self.show(alert, sender: self);
+                
+                
+                
+            }
         } //this is the semicolon
-
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -120,9 +114,5 @@ class LoginScreen: UIViewController {
             DestViewController.userName = usernameField.text!
         }
         
-    }
-
-    
-    
-    
+}
 }
