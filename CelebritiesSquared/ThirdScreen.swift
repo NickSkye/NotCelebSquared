@@ -18,7 +18,7 @@ class ThirdScreen: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //////Background music /////////////////
-        MusicHelper.sharedHelper.playBackgroundMusic()
+      //  MusicHelper.sharedHelper.playBackgroundMusic()
         
        
         /////////////////////////////////////////
@@ -94,7 +94,7 @@ class ThirdScreen: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        MusicHelper.sharedHelper.stopBackgroundMusic()
+        //MusicHelper.sharedHelper.stopBackgroundMusic()
         if segue.identifier == "backMain" {
             var DestViewController : SecondScreen = segue.destination as! SecondScreen
            // doSomething(sender as! UIButton)

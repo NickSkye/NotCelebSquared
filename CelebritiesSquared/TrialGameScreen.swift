@@ -17,14 +17,14 @@ class TrialGameScreen: UIViewController {
 //    var count = 10.00
     var userName = ""
     var totalScore = Double()
-    var passedName = "ERROR"
+    var passedName = "Fundraiser"
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 //        timer = NSTimer.scheduledTimerWithTimeInterval(0.02, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
         
         //put switch statement or ifs here to change image and name based on which button was pressed
-        MusicHelper.sharedHelper.stopBackgroundMusic()
+      //  MusicHelper.sharedHelper.stopBackgroundMusic()
     
         
         

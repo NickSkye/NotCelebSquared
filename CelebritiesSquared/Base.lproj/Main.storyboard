@@ -460,7 +460,7 @@
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <segue destination="Bvb-Py-9eQ" kind="modal" identifier="contestLobbySegue" id="mO6-CL-4ta"/>
-                        <segue destination="hTL-TX-aLm" kind="modal" identifier="fundraiserLobbySegue" id="1gm-sO-3Sn"/>
+                        <segue destination="bQo-qK-jAa" kind="modal" identifier="fundraiserLobbySegue" id="6Ee-rn-ajS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qC6-L4-gtc" sceneMemberID="firstResponder"/>
@@ -1747,10 +1747,39 @@
             </objects>
             <point key="canvasLocation" x="-958" y="969"/>
         </scene>
+        <!--Fundraiser Screen-->
+        <scene sceneID="Upx-X8-JW0">
+            <objects>
+                <viewController id="bQo-qK-jAa" customClass="FundraiserScreen" customModule="CelebritiesSquared" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VpC-Tp-5HN"/>
+                        <viewControllerLayoutGuide type="bottom" id="n9q-EL-eHs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="785-ZL-Ejd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ere-e0-jnk">
+                                <rect key="frame" x="-0.23511293634510366" y="0.26283367556470694" width="414" height="736.00000000000023"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="ere-e0-jnk" id="jX9-C3-Bm8"/>
+                        <segue destination="hSk-qX-hPs" kind="modal" identifier="fundraiserToGame" id="QWc-Xb-ZdX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kax-6H-2zp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-220.28985507246378" y="67.663043478260875"/>
+        </scene>
         <!--Fundraiser Game-->
         <scene sceneID="Ew4-my-6gi">
             <objects>
-                <tableViewController title="Fundraiser Game" id="hTL-TX-aLm" customClass="FundraiserScreen" customModule="CelebritiesSquared" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Fundraiser Game" id="hTL-TX-aLm" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8A6-9w-eAX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1779,7 +1808,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dNR-6B-v7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-129" y="175"/>
+            <point key="canvasLocation" x="229" y="699"/>
         </scene>
         <!--After Answer-->
         <scene sceneID="Izl-Rv-G4l">
@@ -2445,11 +2474,11 @@
         <image name="silverRect" width="2448" height="2448"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rsc-Me-kpv"/>
-        <segue reference="6P8-ve-YTA"/>
-        <segue reference="IYE-37-beL"/>
         <segue reference="LJ0-Bj-q0Y"/>
         <segue reference="mO6-CL-4ta"/>
-        <segue reference="ygB-pH-wdk"/>
+        <segue reference="QWc-Xb-ZdX"/>
+        <segue reference="IYE-37-beL"/>
+        <segue reference="rsc-Me-kpv"/>
+        <segue reference="6P8-ve-YTA"/>
     </inferredMetricsTieBreakers>
 </document>

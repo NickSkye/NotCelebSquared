@@ -5,7 +5,73 @@
 //  Created by Nick Hoyt on 2/2/17.
 //  Copyright © 2017 Nick Hoyt. All rights reserved.
 //
-
+import UIKit
+class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    // Data model: These strings will be the data for the table view cells
+    let animals: [String] = ["Fundraiser One", "Fundraiser Two", "Fundraiser Three", "Fundraiser Four", "Fundraiser Five", "Fundraiser One", "Fundraiser Two", "Fundraiser Three", "Fundraiser Four", "Fundraiser Five", "Fundraiser One", "Fundraiser Two", "Fundraiser Three", "Fundraiser Four", "Fundraiser Five", "Fundraiser One", "Fundraiser Two", "Fundraiser Three", "Fundraiser Four", "Fundraiser Five", "Fundraiser One", "Fundraiser Two", "Fundraiser Three", "Fundraiser Four", "Fundraiser Five"]
+    var userName = "DICK"
+    // cell reuse id (cells that scroll out of view can be reused)
+    let cellReuseIdentifier = "cell"
+    
+    // don't forget to hook this up from the storyboard
+    @IBOutlet var tableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let label = UILabel(frame: CGRect(x: 20, y: 20, width: 50, height: 50))
+        label.text = "TEST TEXT"
+        tableView.addSubview(label)
+        // Register the table view cell class and its reuse id
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        
+        // This view controller itself will provide the delegate methods and row data for the table view.
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    // number of rows in table view
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.animals.count
+    }
+    
+    // create a cell for each table view row
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // create a new cell if needed or reuse an old one
+        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
+       
+        // set the text from the data model
+        cell.textLabel?.text = self.animals[indexPath.row]
+        
+        return cell
+    }
+    
+    // method to run when table view cell is tapped
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You tapped cell number \(indexPath.row).")
+        self.performSegue(withIdentifier: "fundraiserToGame", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //MusicHelper.sharedHelper.stopBackgroundMusic()
+        if segue.identifier == "backMain" {
+            var DestViewController : SecondScreen = segue.destination as! SecondScreen
+            // doSomething(sender as! UIButton)
+            // DestViewController.passedName = buttonName
+            // DestViewController.userName = userName
+        }
+        else{
+            let DestViewController : TrialGameScreen = segue.destination as! TrialGameScreen
+            //doSomething(sender as! UIButton)
+           // DestViewController.passedName = buttonName
+            DestViewController.userName = userName
+        }
+        //performSegueWithIdentifier("threeToGame", sender: self)
+        
+    }
+}
+/*
 import UIKit
 import AVFoundation
 class FundraiserScreen: UITableViewController {
@@ -109,4 +175,4 @@ class FundraiserScreen: UITableViewController {
     }
     
 }
-
+*/
