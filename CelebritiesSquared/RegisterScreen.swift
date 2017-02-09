@@ -22,7 +22,7 @@ class RegisterScreen: UIViewController {
     
     
     @IBOutlet var confirmPasswordField: UITextField!
-    
+     
     
     @IBOutlet var emailField: UITextField!
     
@@ -50,7 +50,7 @@ class RegisterScreen: UIViewController {
         
         
         if(password == confirmPassword){
-            var request = URLRequest(url: URL(string: "http://celebritiessquared.com/CSPhp/Register.php")!)
+            var request = URLRequest(url: URL(string: "http://dev.celebritiessquared.com/CSPhp/Register.php")!)
             
             request.httpMethod = "POST"
             

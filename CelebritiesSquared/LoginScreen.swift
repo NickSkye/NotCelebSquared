@@ -38,7 +38,7 @@ class LoginScreen: UIViewController {
         var password : String = passwordField.text!
         
         
-        var request = URLRequest(url: URL(string: "http://celebritiessquared.com/CSPhp/SignIn.php")!)
+        var request = URLRequest(url: URL(string: "http://dev.celebritiessquared.com/CSPhp/SignIn.php")!)
         
         request.httpMethod = "POST"
         

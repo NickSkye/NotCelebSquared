@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="hollywoodBack" translatesAutoresizingMaskIntoConstraints="NO" id="R2c-8X-uQK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Celebrities_squared" translatesAutoresizingMaskIntoConstraints="NO" id="R2c-8X-uQK">
                                 <rect key="frame" x="-174" y="-69" width="947" height="738"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOg-dj-yeO">
@@ -341,11 +341,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="celebSquaredLobbyImageTwo" translatesAutoresizingMaskIntoConstraints="NO" id="Ltf-UH-5nl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Celebrities_squared" translatesAutoresizingMaskIntoConstraints="NO" id="Ltf-UH-5nl">
                                 <rect key="frame" x="-181" y="0.0" width="947" height="738"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoCeleb" translatesAutoresizingMaskIntoConstraints="NO" id="ypP-rr-Hkj">
-                                <rect key="frame" x="65" y="47" width="273" height="89"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQT-sc-Ce3">
                                 <rect key="frame" x="156" y="293" width="290" height="45"/>
@@ -439,12 +436,10 @@
                             <constraint firstItem="c9L-Dx-Ytx" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="CBD-gZ-jiY"/>
                             <constraint firstItem="HqY-6B-pG9" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="CCK-OZ-HTc"/>
                             <constraint firstItem="0yO-wI-KdZ" firstAttribute="top" secondItem="oCe-Kv-lRs" secondAttribute="bottom" id="EtV-Ad-iar"/>
-                            <constraint firstItem="ypP-rr-Hkj" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="GXG-h8-S7A"/>
                             <constraint firstItem="Nai-KE-V3I" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="J7d-zk-Z90"/>
                             <constraint firstItem="VmU-ql-I0w" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="KTQ-9p-S2F"/>
                             <constraint firstItem="vdE-qK-lDd" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="-105.5" id="MXt-Ab-PAC"/>
                             <constraint firstItem="RSQ-Tj-Eit" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="RCX-sr-TI6"/>
-                            <constraint firstItem="ypP-rr-Hkj" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="-300" id="T4B-t0-U3d"/>
                             <constraint firstItem="tQT-sc-Ce3" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="UV4-Pc-9hz"/>
                             <constraint firstItem="HqY-6B-pG9" firstAttribute="top" secondItem="KM3-pW-sT2" secondAttribute="bottom" constant="50" id="UzL-mA-OPJ"/>
                             <constraint firstItem="Ltf-UH-5nl" firstAttribute="width" secondItem="anN-AL-Z8D" secondAttribute="width" id="VxX-zF-mCc"/>
@@ -460,37 +455,17 @@
                             <constraint firstItem="Ltf-UH-5nl" firstAttribute="height" secondItem="anN-AL-Z8D" secondAttribute="height" id="tQc-DR-Vtp"/>
                             <constraint firstItem="RSQ-Tj-Eit" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" constant="-30" id="wO6-ga-9W5"/>
                             <constraint firstItem="oCe-Kv-lRs" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="zFt-8a-42K"/>
-                            <constraint firstItem="ypP-rr-Hkj" firstAttribute="top" secondItem="KM3-pW-sT2" secondAttribute="bottom" constant="-10" id="zTD-gn-OrG"/>
                         </constraints>
                     </view>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <segue destination="Bvb-Py-9eQ" kind="modal" identifier="contestLobbySegue" id="mO6-CL-4ta"/>
-                        <segue destination="2YI-Yz-Wm6" kind="modal" identifier="fundraiserLobbySegue" id="9Wp-Vg-PvB"/>
+                        <segue destination="hTL-TX-aLm" kind="modal" identifier="fundraiserLobbySegue" id="1gm-sO-3Sn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qC6-L4-gtc" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-988.40579710144937" y="-243.75000000000003"/>
-        </scene>
-        <!--Fundraiser Screen-->
-        <scene sceneID="BMD-9R-W3m">
-            <objects>
-                <viewController id="2YI-Yz-Wm6" customClass="FundraiserScreen" customModule="CelebritiesSquared" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Shs-C8-vZX"/>
-                        <viewControllerLayoutGuide type="bottom" id="mcg-he-Soc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="w6O-vF-I1g">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Ugy-tZ-iOr"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6AX-KE-PvQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-472" y="377"/>
         </scene>
         <!--Third Screen-->
         <scene sceneID="owg-wd-cEL">
@@ -1246,7 +1221,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySm-vn-9LO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="1qa-0h-UZR"/>
             </objects>
-            <point key="canvasLocation" x="322" y="-667"/>
+            <point key="canvasLocation" x="1228.985507246377" y="-667.66304347826087"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="kDk-Xc-TLY">
@@ -1772,6 +1747,40 @@
             </objects>
             <point key="canvasLocation" x="-958" y="969"/>
         </scene>
+        <!--Fundraiser Game-->
+        <scene sceneID="Ew4-my-6gi">
+            <objects>
+                <tableViewController title="Fundraiser Game" id="hTL-TX-aLm" customClass="FundraiserScreen" customModule="CelebritiesSquared" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8A6-9w-eAX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tmw-E3-Oke">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tmw-E3-Oke" id="Kj1-3d-Cjl">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" label="Fundraiser"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hTL-TX-aLm" id="3yz-Ui-5zR"/>
+                            <outlet property="delegate" destination="hTL-TX-aLm" id="aDs-aX-TGO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="IFt-oh-9n6"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="ybL-T3-P0H">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNR-6B-v7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-129" y="175"/>
+        </scene>
         <!--After Answer-->
         <scene sceneID="Izl-Rv-G4l">
             <objects>
@@ -1830,7 +1839,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dA5-Iq-VmM" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-200" y="929"/>
+            <point key="canvasLocation" x="707.24637681159425" y="928.53260869565224"/>
         </scene>
         <!--Contest Over Screen-->
         <scene sceneID="GZm-Y2-b5w">
@@ -2386,6 +2395,7 @@
         <image name="Bellagio " width="144" height="96"/>
         <image name="Blake Shelton" width="115" height="110"/>
         <image name="Bon Jovi" width="209" height="299"/>
+        <image name="Celebrities_squared" width="2048" height="2732"/>
         <image name="Channing" width="998" height="1024"/>
         <image name="Gold Token2" width="500" height="500"/>
         <image name="Gucci Hand Bag" width="980" height="980"/>
@@ -2424,13 +2434,11 @@
         <image name="buttonLobby" width="200" height="40"/>
         <image name="buttonMain" width="200" height="41"/>
         <image name="buttonQualifier" width="290" height="45"/>
-        <image name="celebSquaredLobbyImageTwo" width="2045" height="2048"/>
         <image name="dashbutton" width="52" height="53"/>
         <image name="facebook-logo-png-transparent-background" width="300" height="300"/>
         <image name="glossyBlackBack" width="1600" height="1591"/>
         <image name="goldBorder" width="1200" height="1200"/>
         <image name="goldRect" width="280" height="280"/>
-        <image name="hollywoodBack" width="2048" height="1787"/>
         <image name="lexus" width="500" height="288"/>
         <image name="moreContent" width="359" height="55"/>
         <image name="redCarpet1" width="768" height="768"/>
@@ -2439,9 +2447,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="rsc-Me-kpv"/>
         <segue reference="6P8-ve-YTA"/>
-        <segue reference="4oM-Xg-bxe"/>
-        <segue reference="mO6-CL-4ta"/>
+        <segue reference="IYE-37-beL"/>
         <segue reference="LJ0-Bj-q0Y"/>
+        <segue reference="mO6-CL-4ta"/>
         <segue reference="ygB-pH-wdk"/>
     </inferredMetricsTieBreakers>
 </document>
