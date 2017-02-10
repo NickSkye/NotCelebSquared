@@ -13,6 +13,8 @@ class TrialGameScreen: UIViewController {
     @IBOutlet var timerLabel: UILabel!
     @IBOutlet var picture: UIImageView!
     @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var csLogo: UIImageView!
+    
 //    var timer = NSTimer()
 //    var count = 10.00
     var userName = ""
@@ -26,9 +28,7 @@ class TrialGameScreen: UIViewController {
         //put switch statement or ifs here to change image and name based on which button was pressed
       //  MusicHelper.sharedHelper.stopBackgroundMusic()
     
-        
-        
-        
+               
         picture.image = UIImage(named: passedName)!
         nameLabel.text = passedName
     }

@@ -416,7 +416,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqY-6B-pG9">
-                                <rect key="frame" x="222" y="188" width="159" height="51"/>
+                                <rect key="frame" x="222" y="188" width="159" height="44"/>
                                 <state key="normal" image="buttonMain"/>
                                 <connections>
                                     <action selector="fundraiserButt:" destination="cF6-pN-pRe" eventType="touchUpInside" id="KrR-hB-bzp"/>
@@ -439,12 +439,12 @@
                             <constraint firstItem="Nai-KE-V3I" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="J7d-zk-Z90"/>
                             <constraint firstItem="VmU-ql-I0w" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="KTQ-9p-S2F"/>
                             <constraint firstItem="vdE-qK-lDd" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="-105.5" id="MXt-Ab-PAC"/>
+                            <constraint firstItem="HqY-6B-pG9" firstAttribute="height" secondItem="Ltf-UH-5nl" secondAttribute="height" id="QQN-VL-oNx"/>
                             <constraint firstItem="RSQ-Tj-Eit" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="RCX-sr-TI6"/>
+                            <constraint firstItem="HqY-6B-pG9" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="-160" id="TXm-Yq-qkF"/>
                             <constraint firstItem="tQT-sc-Ce3" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="UV4-Pc-9hz"/>
-                            <constraint firstItem="HqY-6B-pG9" firstAttribute="top" secondItem="KM3-pW-sT2" secondAttribute="bottom" constant="50" id="UzL-mA-OPJ"/>
                             <constraint firstItem="Ltf-UH-5nl" firstAttribute="width" secondItem="anN-AL-Z8D" secondAttribute="width" id="VxX-zF-mCc"/>
                             <constraint firstItem="tQT-sc-Ce3" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="-52.5" id="YNi-Ag-u4j"/>
-                            <constraint firstItem="vdE-qK-lDd" firstAttribute="top" secondItem="HqY-6B-pG9" secondAttribute="bottom" constant="8" id="bN9-L0-O2G"/>
                             <constraint firstItem="Ltf-UH-5nl" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" id="lCx-qN-CIg"/>
                             <constraint firstItem="VmU-ql-I0w" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" id="mWf-Ei-z1y"/>
                             <constraint firstItem="vdE-qK-lDd" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="nPo-u0-FBz"/>
@@ -1393,13 +1393,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="redCarpet1" translatesAutoresizingMaskIntoConstraints="NO" id="Dyu-Dj-r4j">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="BG_simple" translatesAutoresizingMaskIntoConstraints="NO" id="Dyu-Dj-r4j">
                                 <rect key="frame" x="-287" y="-2" width="947" height="738"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoCeleb" translatesAutoresizingMaskIntoConstraints="NO" id="8yy-1H-aCf">
-                                <rect key="frame" x="71" y="7" width="273" height="89"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CS_logo" translatesAutoresizingMaskIntoConstraints="NO" id="8yy-1H-aCf">
+                                <rect key="frame" x="40" y="7" width="273" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="Ty7-5l-JrO"/>
+                                    <constraint firstAttribute="width" constant="273" id="vcw-vi-X8N"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoSquareLight" translatesAutoresizingMaskIntoConstraints="NO" id="dMi-Gu-zlq">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoSquareLight" translatesAutoresizingMaskIntoConstraints="NO" id="dMi-Gu-zlq">
                                 <rect key="frame" x="87" y="62" width="240" height="128"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Channing" translatesAutoresizingMaskIntoConstraints="NO" id="0Hi-VK-SNw">
@@ -1439,20 +1443,26 @@
                             <constraint firstItem="Dyu-Dj-r4j" firstAttribute="centerX" secondItem="aiS-nn-Ddc" secondAttribute="centerX" id="7Q6-Uu-RKX"/>
                             <constraint firstItem="Dyu-Dj-r4j" firstAttribute="centerY" secondItem="aiS-nn-Ddc" secondAttribute="centerY" id="Ad8-fn-aAN"/>
                             <constraint firstItem="0Hi-VK-SNw" firstAttribute="centerX" secondItem="aiS-nn-Ddc" secondAttribute="centerX" id="HYP-a1-rP9"/>
-                            <constraint firstItem="8yy-1H-aCf" firstAttribute="centerY" secondItem="aiS-nn-Ddc" secondAttribute="centerY" constant="-316.5" id="JNz-gr-osG"/>
+                            <constraint firstItem="8yy-1H-aCf" firstAttribute="centerY" secondItem="aiS-nn-Ddc" secondAttribute="centerY" constant="-270" id="JNz-gr-osG"/>
                             <constraint firstItem="dMi-Gu-zlq" firstAttribute="centerX" secondItem="aiS-nn-Ddc" secondAttribute="centerX" id="LXq-qT-qpv"/>
+                            <constraint firstItem="8yy-1H-aCf" firstAttribute="top" secondItem="osR-Um-ai6" secondAttribute="bottom" constant="-13" id="MSq-wJ-HJZ"/>
                             <constraint firstItem="8yy-1H-aCf" firstAttribute="centerX" secondItem="aiS-nn-Ddc" secondAttribute="centerX" id="P45-fA-Yao"/>
                             <constraint firstItem="VhF-yN-9bE" firstAttribute="centerY" secondItem="aiS-nn-Ddc" secondAttribute="centerY" constant="112" id="Yah-JC-btc"/>
                             <constraint firstItem="6ga-t8-jtx" firstAttribute="centerY" secondItem="aiS-nn-Ddc" secondAttribute="centerY" constant="206" id="ZlF-NB-zoI"/>
+                            <constraint firstItem="0Hi-VK-SNw" firstAttribute="top" secondItem="8yy-1H-aCf" secondAttribute="bottom" constant="10" id="a6j-E6-Jor"/>
+                            <constraint firstItem="8yy-1H-aCf" firstAttribute="leading" secondItem="aiS-nn-Ddc" secondAttribute="leadingMargin" constant="20" id="cbl-kU-5WV"/>
+                            <constraint firstItem="8yy-1H-aCf" firstAttribute="top" secondItem="osR-Um-ai6" secondAttribute="bottom" constant="-13" id="gVL-EK-cBM"/>
                             <constraint firstItem="Jed-4I-vNZ" firstAttribute="centerY" secondItem="aiS-nn-Ddc" secondAttribute="centerY" constant="33.5" id="k4g-Dw-Y0f"/>
                             <constraint firstItem="6ga-t8-jtx" firstAttribute="centerX" secondItem="aiS-nn-Ddc" secondAttribute="centerX" id="mBO-Xy-I5L"/>
                             <constraint firstItem="Jed-4I-vNZ" firstAttribute="centerX" secondItem="aiS-nn-Ddc" secondAttribute="centerX" id="wfz-hc-P6p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8yy-1H-aCf" secondAttribute="trailing" constant="20" id="xUg-K6-RUy"/>
                             <constraint firstItem="VhF-yN-9bE" firstAttribute="centerX" secondItem="aiS-nn-Ddc" secondAttribute="centerX" id="zx9-Mk-kCW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eZq-fy-tCY"/>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="csLogo" destination="8yy-1H-aCf" id="lhf-Nt-5hn"/>
                         <outlet property="nameLabel" destination="Jed-4I-vNZ" id="FUf-sI-CrR"/>
                         <outlet property="picture" destination="0Hi-VK-SNw" id="jrS-fS-uaU"/>
                         <segue destination="cF6-pN-pRe" kind="presentation" id="cP1-bS-LHY"/>
@@ -1461,7 +1471,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbn-5B-oRI" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2427" y="929"/>
+            <point key="canvasLocation" x="-2474" y="929"/>
         </scene>
         <!--Contest Over Screen-->
         <scene sceneID="Nbt-4e-YKc">
@@ -1478,10 +1488,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="glossyBlackBack" translatesAutoresizingMaskIntoConstraints="NO" id="P4p-0Q-XEb">
                                 <rect key="frame" x="-5" y="-9" width="426" height="758"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoCeleb" translatesAutoresizingMaskIntoConstraints="NO" id="z5b-Qy-Bl6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="CS_logo" translatesAutoresizingMaskIntoConstraints="NO" id="z5b-Qy-Bl6">
                                 <rect key="frame" x="71" y="7" width="273" height="89"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoSquareLight" translatesAutoresizingMaskIntoConstraints="NO" id="fga-JA-wNK">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoSquareLight" translatesAutoresizingMaskIntoConstraints="NO" id="fga-JA-wNK">
                                 <rect key="frame" x="87" y="62" width="240" height="128"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CM8-ow-VYm">
@@ -1524,7 +1534,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="z5b-Qy-Bl6" firstAttribute="top" secondItem="n0O-Rv-s2f" secondAttribute="bottom" constant="-13" id="1fY-2U-4lM"/>
                             <constraint firstItem="pqO-1G-ACl" firstAttribute="top" secondItem="RlO-BK-FoJ" secondAttribute="bottom" id="2SG-S9-NMH"/>
+                            <constraint firstItem="z5b-Qy-Bl6" firstAttribute="leading" secondItem="AC3-Ho-7EB" secondAttribute="leadingMargin" constant="51" id="83n-tu-fUb"/>
                             <constraint firstItem="pqO-1G-ACl" firstAttribute="centerY" secondItem="AC3-Ho-7EB" secondAttribute="centerY" constant="158.5" id="8Xx-4m-HQP"/>
                             <constraint firstItem="pqO-1G-ACl" firstAttribute="centerX" secondItem="AC3-Ho-7EB" secondAttribute="centerX" id="AYF-jz-RZd"/>
                             <constraint firstItem="bEa-as-jyJ" firstAttribute="centerX" secondItem="AC3-Ho-7EB" secondAttribute="centerX" id="C5d-3H-3Wm"/>
@@ -1535,10 +1547,12 @@
                             <constraint firstItem="0U1-xy-HuR" firstAttribute="top" secondItem="CM8-ow-VYm" secondAttribute="bottom" constant="8" id="OYw-8V-eRT"/>
                             <constraint firstItem="fga-JA-wNK" firstAttribute="centerX" secondItem="AC3-Ho-7EB" secondAttribute="centerX" id="PUs-Sx-Vme"/>
                             <constraint firstItem="RlO-BK-FoJ" firstAttribute="centerY" secondItem="AC3-Ho-7EB" secondAttribute="centerY" constant="125" id="XGs-AU-0Ad"/>
+                            <constraint firstItem="bEa-as-jyJ" firstAttribute="top" secondItem="z5b-Qy-Bl6" secondAttribute="bottom" constant="102" id="XoR-Cu-mtf"/>
                             <constraint firstItem="fga-JA-wNK" firstAttribute="centerY" secondItem="AC3-Ho-7EB" secondAttribute="centerY" constant="-174" id="YKk-up-F5h"/>
                             <constraint firstItem="RlO-BK-FoJ" firstAttribute="centerX" secondItem="AC3-Ho-7EB" secondAttribute="centerX" id="Zv3-Mp-aJ1"/>
                             <constraint firstItem="pqO-1G-ACl" firstAttribute="top" secondItem="RlO-BK-FoJ" secondAttribute="bottom" id="azf-GT-9aN"/>
                             <constraint firstItem="bEa-as-jyJ" firstAttribute="centerY" secondItem="AC3-Ho-7EB" secondAttribute="centerY" constant="-7" id="hXK-pg-6RO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z5b-Qy-Bl6" secondAttribute="trailing" constant="50" id="i1L-Gc-NIN"/>
                             <constraint firstItem="P4p-0Q-XEb" firstAttribute="centerY" secondItem="AC3-Ho-7EB" secondAttribute="centerY" id="ycN-By-AFW"/>
                         </constraints>
                     </view>
@@ -1571,10 +1585,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="glossyBlackBack" translatesAutoresizingMaskIntoConstraints="NO" id="W8q-Yk-NGT">
                                 <rect key="frame" x="-6" y="-11" width="426" height="758"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoCeleb" translatesAutoresizingMaskIntoConstraints="NO" id="V1Q-Ta-45D">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="CS_logo" translatesAutoresizingMaskIntoConstraints="NO" id="V1Q-Ta-45D">
                                 <rect key="frame" x="71" y="7" width="273" height="89"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoSquareLight" translatesAutoresizingMaskIntoConstraints="NO" id="Wk6-n1-YXy">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoSquareLight" translatesAutoresizingMaskIntoConstraints="NO" id="Wk6-n1-YXy">
                                 <rect key="frame" x="87" y="62" width="240" height="128"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KET-6f-6A0">
@@ -1702,6 +1716,7 @@
                             <constraint firstItem="pa3-6y-vrI" firstAttribute="centerY" secondItem="GsM-Jd-cwH" secondAttribute="centerY" constant="163" id="61L-x8-vpA"/>
                             <constraint firstItem="AZQ-5f-sGL" firstAttribute="centerY" secondItem="GsM-Jd-cwH" secondAttribute="centerY" constant="108" id="Cck-ka-71b"/>
                             <constraint firstItem="KET-6f-6A0" firstAttribute="centerX" secondItem="GsM-Jd-cwH" secondAttribute="centerX" id="DK4-nR-l5h"/>
+                            <constraint firstItem="V1Q-Ta-45D" firstAttribute="top" secondItem="V9S-h4-XUl" secondAttribute="bottom" constant="-13" id="F4u-bu-IRq"/>
                             <constraint firstItem="cgQ-pb-Bdi" firstAttribute="centerX" secondItem="GsM-Jd-cwH" secondAttribute="centerX" constant="-80" id="FNS-4c-Bgq"/>
                             <constraint firstItem="rbc-6x-QNa" firstAttribute="centerY" secondItem="GsM-Jd-cwH" secondAttribute="centerY" constant="-77.5" id="Ibk-Tc-FT8"/>
                             <constraint firstItem="bIc-6x-eGn" firstAttribute="centerX" secondItem="GsM-Jd-cwH" secondAttribute="centerX" constant="80" id="KNu-84-dj5"/>
@@ -1713,6 +1728,7 @@
                             <constraint firstItem="ow7-G2-EjP" firstAttribute="centerY" secondItem="GsM-Jd-cwH" secondAttribute="centerY" constant="108" id="RoH-O7-adU"/>
                             <constraint firstItem="V1Q-Ta-45D" firstAttribute="centerY" secondItem="GsM-Jd-cwH" secondAttribute="centerY" constant="-248.5" id="S4a-1n-tGe"/>
                             <constraint firstItem="W8q-Yk-NGT" firstAttribute="centerY" secondItem="GsM-Jd-cwH" secondAttribute="centerY" id="V8f-PO-oxV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="V1Q-Ta-45D" secondAttribute="trailing" constant="50" id="Vm4-6v-UjP"/>
                             <constraint firstItem="GXk-98-DHK" firstAttribute="centerX" secondItem="GsM-Jd-cwH" secondAttribute="centerX" constant="-80" id="W9s-T3-JbA"/>
                             <constraint firstItem="AZQ-5f-sGL" firstAttribute="centerX" secondItem="GsM-Jd-cwH" secondAttribute="centerX" constant="-80" id="WaJ-Ez-0HK"/>
                             <constraint firstItem="Xqd-y9-lkb" firstAttribute="centerX" secondItem="GsM-Jd-cwH" secondAttribute="centerX" constant="-80" id="Xln-Ib-Fwe"/>
@@ -1825,10 +1841,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="glossyBlackBack" translatesAutoresizingMaskIntoConstraints="NO" id="Xff-bc-4vD">
                                 <rect key="frame" x="0.0" y="-12" width="426" height="758"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoCeleb" translatesAutoresizingMaskIntoConstraints="NO" id="png-85-Run">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="CS_logo" translatesAutoresizingMaskIntoConstraints="NO" id="png-85-Run">
                                 <rect key="frame" x="71" y="7" width="273" height="89"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoSquareLight" translatesAutoresizingMaskIntoConstraints="NO" id="K49-Wc-qwh">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoSquareLight" translatesAutoresizingMaskIntoConstraints="NO" id="K49-Wc-qwh">
                                 <rect key="frame" x="87" y="62" width="240" height="128"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgP-UX-S0m">
@@ -1844,15 +1860,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="png-85-Run" firstAttribute="top" secondItem="9W2-gU-Zjl" secondAttribute="bottom" constant="-13" id="1xn-RT-w6O"/>
                             <constraint firstItem="K49-Wc-qwh" firstAttribute="centerY" secondItem="HV6-1l-nWm" secondAttribute="centerY" constant="-174" id="8Dy-t1-b52"/>
                             <constraint firstItem="GgP-UX-S0m" firstAttribute="centerX" secondItem="HV6-1l-nWm" secondAttribute="centerX" id="A9U-if-srd"/>
                             <constraint firstItem="png-85-Run" firstAttribute="centerX" secondItem="HV6-1l-nWm" secondAttribute="centerX" id="FiR-jy-59I"/>
                             <constraint firstItem="wQ1-5r-4dw" firstAttribute="leading" secondItem="HV6-1l-nWm" secondAttribute="leadingMargin" constant="41" id="Gt5-Te-8Sm"/>
                             <constraint firstItem="K49-Wc-qwh" firstAttribute="centerX" secondItem="HV6-1l-nWm" secondAttribute="centerX" id="H0j-en-nDx"/>
                             <constraint firstItem="grW-T3-rmu" firstAttribute="top" secondItem="GgP-UX-S0m" secondAttribute="bottom" constant="5" id="HCe-yG-e2B"/>
+                            <constraint firstItem="png-85-Run" firstAttribute="leading" secondItem="HV6-1l-nWm" secondAttribute="leadingMargin" constant="51" id="Pkl-2m-A2F"/>
                             <constraint firstItem="Xff-bc-4vD" firstAttribute="centerX" secondItem="HV6-1l-nWm" secondAttribute="centerX" id="RzV-HV-1qJ"/>
                             <constraint firstItem="Xff-bc-4vD" firstAttribute="centerY" secondItem="HV6-1l-nWm" secondAttribute="centerY" id="jsA-l1-oug"/>
                             <constraint firstItem="png-85-Run" firstAttribute="centerY" secondItem="HV6-1l-nWm" secondAttribute="centerY" constant="-248.5" id="paX-zd-UQI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="png-85-Run" secondAttribute="trailing" constant="50" id="ueM-0l-pJb"/>
                             <constraint firstItem="wQ1-5r-4dw" firstAttribute="centerY" secondItem="HV6-1l-nWm" secondAttribute="centerY" id="wWk-UP-sNn"/>
                             <constraint firstItem="wQ1-5r-4dw" firstAttribute="centerX" secondItem="HV6-1l-nWm" secondAttribute="centerX" id="wmS-Eg-lND"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wQ1-5r-4dw" secondAttribute="trailing" constant="33" id="xF7-BC-pkM"/>
@@ -2004,10 +2023,10 @@
                                     <constraint firstAttribute="width" constant="375" id="Pvq-Vi-fX4"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoCeleb" translatesAutoresizingMaskIntoConstraints="NO" id="3cU-N6-vRS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="CS_logo" translatesAutoresizingMaskIntoConstraints="NO" id="3cU-N6-vRS">
                                 <rect key="frame" x="71" y="7" width="273" height="89"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoSquareLight" translatesAutoresizingMaskIntoConstraints="NO" id="acJ-mF-wzV">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LogoSquareLight" translatesAutoresizingMaskIntoConstraints="NO" id="acJ-mF-wzV">
                                 <rect key="frame" x="87" y="62" width="240" height="128"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vux-2D-OBf">
@@ -2421,9 +2440,11 @@
     <resources>
         <image name="AMC" width="170" height="90"/>
         <image name="Amazon Fire Tablet" width="300" height="300"/>
+        <image name="BG_simple" width="1536" height="2048"/>
         <image name="Bellagio " width="144" height="96"/>
         <image name="Blake Shelton" width="115" height="110"/>
         <image name="Bon Jovi" width="209" height="299"/>
+        <image name="CS_logo" width="2400" height="1500"/>
         <image name="Celebrities_squared" width="2048" height="2732"/>
         <image name="Channing" width="998" height="1024"/>
         <image name="Gold Token2" width="500" height="500"/>
@@ -2474,11 +2495,11 @@
         <image name="silverRect" width="2448" height="2448"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LJ0-Bj-q0Y"/>
-        <segue reference="mO6-CL-4ta"/>
-        <segue reference="QWc-Xb-ZdX"/>
-        <segue reference="IYE-37-beL"/>
-        <segue reference="rsc-Me-kpv"/>
+        <segue reference="lq1-8q-BlZ"/>
         <segue reference="6P8-ve-YTA"/>
+        <segue reference="rsc-Me-kpv"/>
+        <segue reference="QWc-Xb-ZdX"/>
+        <segue reference="HDs-Xg-tvQ"/>
+        <segue reference="IYE-37-beL"/>
     </inferredMetricsTieBreakers>
 </document>
