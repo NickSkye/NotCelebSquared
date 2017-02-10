@@ -9,7 +9,7 @@ import UIKit
 class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // Data model: These strings will be the data for the table view cells
-    let animals: [String] = ["Fundraiser One", "Fundraiser Two", "Fundraiser Three", "Fundraiser Four", "Fundraiser Five", "Fundraiser One", "Fundraiser Two", "Fundraiser Three", "Fundraiser Four", "Fundraiser Five", "Fundraiser One", "Fundraiser Two", "Fundraiser Three", "Fundraiser Four", "Fundraiser Five", "Fundraiser One", "Fundraiser Two", "Fundraiser Three", "Fundraiser Four", "Fundraiser Five", "Fundraiser One", "Fundraiser Two", "Fundraiser Three", "Fundraiser Four", "Fundraiser Five"]
+    let animals: [String] = ["Fundraiser One", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon"]
     var userName = "DICK"
     // cell reuse id (cells that scroll out of view can be reused)
     let cellReuseIdentifier = "cell"
@@ -19,16 +19,23 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let label = UILabel(frame: CGRect(x: 20, y: 20, width: 50, height: 50))
-        label.text = "TEST TEXT"
+        let label = UILabel(frame: CGRect(x: 0 , y: 0 , width: UIScreen.main.bounds.size.width, height: 50))
+        label.center.x = self.view.center.x
+        label.text = "Fundraisers"
+        label.textAlignment = .center
         tableView.addSubview(label)
+        //tableView.center.x = self.view.center.x
         // Register the table view cell class and its reuse id
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         
         // This view controller itself will provide the delegate methods and row data for the table view.
         tableView.delegate = self
         tableView.dataSource = self
+        self.tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 65))
+        self.tableView.tableHeaderView?.backgroundColor = UIColor.red
+    
     }
+    
     
     // number of rows in table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

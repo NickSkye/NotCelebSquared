@@ -39,7 +39,7 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WLH-Qm-Lnl" customClass="CSAnimationView">
                                 <rect key="frame" x="67" y="38" width="240" height="294"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="LogoCeleb" translatesAutoresizingMaskIntoConstraints="NO" id="GaO-Qk-LC2">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="LogoCeleb" translatesAutoresizingMaskIntoConstraints="NO" id="GaO-Qk-LC2">
                                         <rect key="frame" x="-17" y="19" width="273" height="170"/>
                                     </imageView>
                                 </subviews>
@@ -1760,7 +1760,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ere-e0-jnk">
-                                <rect key="frame" x="-0.23511293634510366" y="0.26283367556470694" width="414" height="736.00000000000023"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
