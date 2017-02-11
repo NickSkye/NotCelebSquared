@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="77J-c0-DEN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1237,8 +1237,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYI-Ag-0gT">
-                                                    <rect key="frame" x="27" y="3" width="429" height="71.5"/>
-                                                    <state key="normal" title="Button" image="backScreen"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
+                                                    <state key="normal" title="Button" image="Main_Lobby"/>
                                                     <connections>
                                                         <segue destination="cF6-pN-pRe" kind="modal" identifier="backMain" id="LJ0-Bj-q0Y"/>
                                                     </connections>
@@ -1246,7 +1246,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="vYI-Ag-0gT" firstAttribute="leading" secondItem="oRp-vV-Ima" secondAttribute="leadingMargin" constant="50" id="6Lx-fp-5BB"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vYI-Ag-0gT" secondAttribute="bottom" constant="-8" id="H1R-LI-wNP"/>
                                                 <constraint firstItem="vYI-Ag-0gT" firstAttribute="centerX" secondItem="oRp-vV-Ima" secondAttribute="centerX" id="hNb-Zo-g8u"/>
+                                                <constraint firstItem="vYI-Ag-0gT" firstAttribute="top" secondItem="oRp-vV-Ima" secondAttribute="topMargin" constant="-8" id="imo-mc-CMb"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="vYI-Ag-0gT" secondAttribute="trailing" constant="50" id="lsG-93-gHZ"/>
                                                 <constraint firstItem="vYI-Ag-0gT" firstAttribute="centerY" secondItem="oRp-vV-Ima" secondAttribute="centerY" id="xva-SE-6oq"/>
                                             </constraints>
@@ -1673,7 +1675,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5QQ-no-2no" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2399" y="448"/>
+            <point key="canvasLocation" x="3164" y="46"/>
         </scene>
         <!--Fundraiser Screen-->
         <scene sceneID="Upx-X8-JW0">
@@ -2083,7 +2085,6 @@
         <image name="TV_GAMESHOW_1M_QUALIFIER_OMGGGGGG" width="1229" height="192"/>
         <image name="Twitter Logo" width="110" height="110"/>
         <image name="Yankees" width="260" height="300"/>
-        <image name="backScreen" width="433" height="55"/>
         <image name="buttonClear" width="200" height="41"/>
         <image name="buttonClicktoAnswerGreen" width="201" height="40"/>
         <image name="buttonLobby" width="200" height="40"/>
@@ -2098,10 +2099,10 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="pD4-DZ-KBn"/>
-        <segue reference="QWc-Xb-ZdX"/>
-        <segue reference="wn2-Hg-4JX"/>
-        <segue reference="rsc-Me-kpv"/>
-        <segue reference="IYE-37-beL"/>
+        <segue reference="ygB-pH-wdk"/>
         <segue reference="HDs-Xg-tvQ"/>
+        <segue reference="s0N-7s-Dof"/>
+        <segue reference="IYE-37-beL"/>
+        <segue reference="rsc-Me-kpv"/>
     </inferredMetricsTieBreakers>
 </document>
