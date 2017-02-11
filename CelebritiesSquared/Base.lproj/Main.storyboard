@@ -453,6 +453,14 @@
                                     <action selector="fundraiserButt:" destination="cF6-pN-pRe" eventType="touchUpInside" id="KrR-hB-bzp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTy-oi-M4o">
+                                <rect key="frame" x="128" y="670" width="158" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutButt:" destination="cF6-pN-pRe" eventType="touchUpInside" id="Qth-nY-LEo"/>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="KLc-fv-8nB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -471,6 +479,7 @@
                             <constraint firstItem="VmU-ql-I0w" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="KTQ-9p-S2F"/>
                             <constraint firstItem="vdE-qK-lDd" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="-105.5" id="MXt-Ab-PAC"/>
                             <constraint firstItem="tQT-sc-Ce3" firstAttribute="leading" secondItem="anN-AL-Z8D" secondAttribute="leadingMargin" constant="109" id="NJM-9g-GYG"/>
+                            <constraint firstItem="GTy-oi-M4o" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="ONP-f2-0GZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HqY-6B-pG9" secondAttribute="trailing" constant="-117" id="Op1-Q3-OFm"/>
                             <constraint firstItem="HqY-6B-pG9" firstAttribute="leading" secondItem="anN-AL-Z8D" secondAttribute="leadingMargin" constant="50" id="QCt-DQ-gZJ"/>
                             <constraint firstItem="tQT-sc-Ce3" firstAttribute="leading" secondItem="anN-AL-Z8D" secondAttribute="leadingMargin" constant="50" id="R24-Kp-EhB"/>
@@ -487,6 +496,7 @@
                             <constraint firstItem="c9L-Dx-Ytx" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" constant="35" id="oEa-va-9Dq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vdE-qK-lDd" secondAttribute="trailing" constant="-50" id="oZ2-u8-x8W"/>
                             <constraint firstItem="Nai-KE-V3I" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" constant="-70" id="pNb-Ll-Weg"/>
+                            <constraint firstItem="oCe-Kv-lRs" firstAttribute="top" secondItem="GTy-oi-M4o" secondAttribute="bottom" constant="8" id="pl0-hZ-5iS"/>
                             <constraint firstItem="y72-SR-5b2" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" constant="100" id="rbf-bb-0Ew"/>
                             <constraint firstItem="y72-SR-5b2" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="s6M-ae-eZO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tQT-sc-Ce3" secondAttribute="trailing" constant="-522" id="saG-Cd-Jrz"/>
@@ -504,7 +514,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qC6-L4-gtc" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1022" y="-1119"/>
+            <point key="canvasLocation" x="-1023.1884057971015" y="-1119.2934782608697"/>
         </scene>
         <!--Third Screen-->
         <scene sceneID="owg-wd-cEL">
@@ -2086,8 +2096,8 @@
         <segue reference="wn2-Hg-4JX"/>
         <segue reference="rsc-Me-kpv"/>
         <segue reference="6P8-ve-YTA"/>
+        <segue reference="mO6-CL-4ta"/>
         <segue reference="QWc-Xb-ZdX"/>
-        <segue reference="HDs-Xg-tvQ"/>
         <segue reference="4oM-Xg-bxe"/>
     </inferredMetricsTieBreakers>
 </document>

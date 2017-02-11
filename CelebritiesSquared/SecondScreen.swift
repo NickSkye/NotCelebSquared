@@ -36,6 +36,12 @@ class SecondScreen: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func logoutButt(_ sender: Any) {
+        userName = ""
+    }
+    
+    
     @IBAction func facebookButton(_ sender: AnyObject) {
         didTapFacebook(sender)
     }
