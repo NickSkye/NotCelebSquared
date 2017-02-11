@@ -28,7 +28,7 @@ class SecondScreen: UIViewController {
 //        var Alert:UIAlertView = UIAlertView(title: "Test", message: ", delegate: self, cancelButtonTitle: "OK")
 //        Alert.show()
         //1. Create the alert controller.
-        print(userName)
+        print("User" + userName)
     }
     
     override func didReceiveMemoryWarning() {

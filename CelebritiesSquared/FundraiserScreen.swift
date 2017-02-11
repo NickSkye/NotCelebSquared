@@ -10,6 +10,7 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     // Data model: These strings will be the data for the table view cells
     let animals: [String] = ["Fundraiser One", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon"]
+    
     var userName = "DICK"
     // cell reuse id (cells that scroll out of view can be reused)
     let cellReuseIdentifier = "cell"
@@ -33,9 +34,25 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
         tableView.dataSource = self
         self.tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 65))
         self.tableView.tableHeaderView?.backgroundColor = UIColor.red
-    
+        
+        ///////////////////////////////////////////////////////////////////////////////////
+        ///////////////////BACK BUTTON////////////////////////////////////////////////////
+      
+        
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+       // button.backgroundColor = UIColor.blue
+        button.setTitle("Back", for: .normal)
+        button.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        tableView.addSubview(button)
+        
+        
+    //////////////////////////////////BACK BUTTON END//////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////
     }
-    
+    func backButtonTapped(){
+        self.performSegue(withIdentifier: "backFromFund", sender: self)
+        print("Button pressed")
+    }
     
     // number of rows in table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,11 +79,11 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //MusicHelper.sharedHelper.stopBackgroundMusic()
-        if segue.identifier == "backMain" {
+        if segue.identifier == "backFromFund" {
             var DestViewController : SecondScreen = segue.destination as! SecondScreen
             // doSomething(sender as! UIButton)
             // DestViewController.passedName = buttonName
-            // DestViewController.userName = userName
+             DestViewController.userName = userName
         }
         else{
             let DestViewController : TrialGameScreen = segue.destination as! TrialGameScreen
