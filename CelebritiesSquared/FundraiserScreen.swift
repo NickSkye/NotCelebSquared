@@ -8,8 +8,12 @@
 import UIKit
 class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+     final let urlString = "http://dev.celebritiessquared.com/CSPhp/GetContests.php"
     // Data model: These strings will be the data for the table view cells
-    let animals: [String] = ["Fundraiser One", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon", "Coming Soon"]
+    var nameArray = [String]()
+    var prizeArray = [String]()
+    var imgURLArray = [String]()
+    
     
     var userName = "DICK"
     // cell reuse id (cells that scroll out of view can be reused)
@@ -20,6 +24,8 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = 100.0 //change to change row height
+         self.downloadJsonWithURL()
         let label = UILabel(frame: CGRect(x: 0 , y: 0 , width: UIScreen.main.bounds.size.width, height: 50))
         label.center.x = self.view.center.x
         label.text = "Fundraisers"
@@ -54,9 +60,61 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
         print("Button pressed")
     }
     
+    /////////////////////////////////DORI STUFF//////////////////////////////////////////
+    
+    func downloadJsonWithURL(){
+        let url = NSURL(string: urlString)
+        
+        URLSession.shared.dataTask(with: (url as? URL)!, completionHandler: {(data, response, error) ->
+            Void in
+            
+            
+            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments)
+                as? NSDictionary{
+                
+                if let contestArray = jsonObj!.value(forKey: "contest") as? NSArray{
+                    for contest in contestArray{
+                        if let contestDict = contest as? NSDictionary{
+                            if let name = contestDict.value(forKey: "name"){
+                                self.nameArray.append(name as! String)
+                            }
+                            //                            if let name = contestDict.value(forKey: "prize"){
+                            //                                self.prizeArray.append(name as! String)
+                            //                            }
+                            if let name = contestDict.value(forKey: "imageURL"){
+                                self.imgURLArray.append(name as! String)
+                            }
+                            
+                            OperationQueue.main.addOperation ({
+                                self.tableView.reloadData()
+                            })
+                        }
+                    }
+                }
+            }
+            
+        }).resume()
+    }
+
+    func downloadJsonWithTask() {
+        let url = NSURL(string: urlString)
+        
+        var downloadTask = URLRequest(url: (url as? URL)!, cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 20)
+        
+        downloadTask.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: downloadTask, completionHandler: {(data, response, error) -> Void in
+            let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments)
+            print(jsonData)
+        }).resume()
+    }
+    
+    
+    
+    ////////////////////////////////END DORI STUFF///////////////////////////////////////
     // number of rows in table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.animals.count
+        return nameArray.count
     }
     
     // create a cell for each table view row
@@ -66,7 +124,14 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
         let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
        
         // set the text from the data model
-        cell.textLabel?.text = self.animals[indexPath.row]
+        
+        cell.textLabel?.text = nameArray[indexPath.row]
+        let imgURL = NSURL(string: imgURLArray[indexPath.row])
+       
+        if imgURL != nil{
+            let data = NSData(contentsOf: (imgURL as? URL)!)
+            cell.imageView?.image = UIImage(data: data as! Data)
+        }
         
         return cell
     }
@@ -76,6 +141,8 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
         print("You tapped cell number \(indexPath.row).")
         self.performSegue(withIdentifier: "fundraiserToGame", sender: self)
     }
+    
+ 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //MusicHelper.sharedHelper.stopBackgroundMusic()
