@@ -82,10 +82,11 @@ class SecondScreen: UIViewController {
     
     
    
-    
+    //Actually daily free contest button
     @IBAction func tvQualifier(_ sender: AnyObject) {
-        let Alert:UIAlertView = UIAlertView(title: "Oops!", message: "You have not earned enough Celebrities Squared Points to open qualifying rounds for a chance to play on the Celebrities Squared TV Game Show :)", delegate: self, cancelButtonTitle: "OK")
-        Alert.show()
+        performSegue(withIdentifier: "dailyFreeSegue", sender: self)
+       // let Alert:UIAlertView = UIAlertView(title: "Oops!", message: "You have not earned enough Celebrities Squared Points to open qualifying rounds for a chance to play on the Celebrities Squared TV Game Show :)", delegate: self, cancelButtonTitle: "OK")
+      //  Alert.show()
     }
     
     @IBAction func instructionButt(_ sender: AnyObject) {

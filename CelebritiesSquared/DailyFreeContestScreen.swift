@@ -6,9 +6,9 @@
 //  Copyright © 2017 Nick Hoyt. All rights reserved.
 //
 import UIKit
-class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DailyFreeContestScreen: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-     final let urlString = "http://dev.celebritiessquared.com/CSPhp/GetContests.php"
+    final let urlString = "http://dev.celebritiessquared.com/CSPhp/GetFreeContests.php"
     // Data model: These strings will be the data for the table view cells
     var nameArray = [String]()
     var prizeArray = [String]()
@@ -25,12 +25,12 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 100.0 //change to change row height
-       // self.tableView.backgroundColor = UIColor(red: 192/255, green: 192/255, blue: 192/255, alpha: 1)
-
-         self.downloadJsonWithURL()
+        // self.tableView.backgroundColor = UIColor(red: 192/255, green: 192/255, blue: 192/255, alpha: 1)
+        
+        self.downloadJsonWithURL()
         let label = UILabel(frame: CGRect(x: 0 , y: 0 , width: UIScreen.main.bounds.size.width, height: 50))
         label.center.x = self.view.center.x
-        label.text = "Fundraisers"
+        label.text = "Daily Free Contests"
         label.textColor = UIColor(red: 218/255, green: 165/255, blue: 32/255, alpha: 1)
         label.font = UIFont(name: "Copperplate-Bold", size: 26)
         label.textAlignment = .center
@@ -47,21 +47,21 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
         
         ///////////////////////////////////////////////////////////////////////////////////
         ///////////////////BACK BUTTON////////////////////////////////////////////////////
-      
+        
         
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-       // button.backgroundColor = UIColor.blue
+        // button.backgroundColor = UIColor.blue
         button.setTitle("Back", for: .normal)
         //button.setTitleColor(<#T##color: UIColor?##UIColor?#>, for: <#T##UIControlState#>)
         button.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         tableView.addSubview(button)
         
         
-    //////////////////////////////////BACK BUTTON END//////////////////////////////////////
+        //////////////////////////////////BACK BUTTON END//////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////
     }
     func backButtonTapped(){
-        self.performSegue(withIdentifier: "backFromFund", sender: self)
+        self.performSegue(withIdentifier: "backFromFree", sender: self)
         print("Button pressed")
     }
     
@@ -100,7 +100,7 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
             
         }).resume()
     }
-
+    
     func downloadJsonWithTask() {
         let url = NSURL(string: urlString)
         
@@ -127,12 +127,12 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
         
         // create a new cell if needed or reuse an old one
         let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
-       
+        
         // set the text from the data model
-       // cell.backgroundColor = UIColor(red: 192/255, green: 192/255, blue: 192/255, alpha: 1)
+        // cell.backgroundColor = UIColor(red: 192/255, green: 192/255, blue: 192/255, alpha: 1)
         cell.textLabel?.text = nameArray[indexPath.row]
         let imgURL = NSURL(string: imgURLArray[indexPath.row])
-       
+        
         if imgURL != nil{
             let data = NSData(contentsOf: (imgURL as? URL)!)
             cell.imageView?.image = UIImage(data: data as! Data)
@@ -146,23 +146,23 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
         cellTapped = indexPath.row
-        self.performSegue(withIdentifier: "fundraiserToGame", sender: self)
+        self.performSegue(withIdentifier: "freeToGame", sender: self)
     }
     
- 
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //MusicHelper.sharedHelper.stopBackgroundMusic()
-        if segue.identifier == "backFromFund" {
+        if segue.identifier == "backFromFree" {
             var DestViewController : SecondScreen = segue.destination as! SecondScreen
             // doSomething(sender as! UIButton)
             // DestViewController.passedName = buttonName
-             DestViewController.userName = userName
+            DestViewController.userName = userName
         }
         else{
             let DestViewController : TrialGameScreen = segue.destination as! TrialGameScreen
             //doSomething(sender as! UIButton)
-           // DestViewController.passedName = buttonName
+            // DestViewController.passedName = buttonName
             DestViewController.userName = userName
             DestViewController.cellTapped = cellTapped
         }
@@ -170,108 +170,3 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
         
     }
 }
-/*
-import UIKit
-import AVFoundation
-class FundraiserScreen: UITableViewController {
-    
-    var userName = ""
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //////Background music /////////////////
-        
-        //MusicHelper.sharedHelper.playBackgroundMusic()
-        
-        
-        /////////////////////////////////////////
-        
-        let date = Date()
-        let calendar = Calendar.current
-        let components = (calendar as NSCalendar).components([.day , .month , .year], from: date)
-        print(userName)
-        let year =  components.year!
-        let month = components.month!
-        let day = components.day!
-       // contestLabel.text = "Celebrities Squared\n" + String(describing: month) + "/" + String(describing: day) + "/" + String(describing: year)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    //    @IBAction func nordstromButton(sender: AnyObject) {
-    //        performSegueWithIdentifier("timeOut", sender: self)
-    //    }
-    
-//    @IBAction func doSomething(_ sender: UIButton) {
-//        let propertyToCheck = sender.tag
-//        switch propertyToCheck {
-//        case 1:
-//            buttonName = "Nordstroms"
-//        case 2:
-//            buttonName = "Michael Kors"
-//        case 3:
-//            buttonName = "Madonna"
-//        case 4:
-//            buttonName = "Yankees"
-//        case 5:
-//            buttonName = "Ruths Chris"
-//        case 6:
-//            buttonName = "Amazon Fire Tablet"
-//        case 7:
-//            buttonName = "Channing"
-//        case 8:
-//            buttonName = "KimKardashian"
-//        case 9:
-//            buttonName = "Bon Jovi"
-//        case 10:
-//            buttonName = "Blake Shelton"
-//        case 11:
-//            buttonName = "Gucci Hand Bag"
-//        case 12:
-//            buttonName = "Macy\'s Gift Card"
-//        case 13:
-//            buttonName = "Range Rover Sport"
-//        case 14:
-//            buttonName = "Samsung TV 4639.00"
-//        case 15:
-//            buttonName = "Meet a Celeb"
-//        case 16:
-//            buttonName = "Bellagio "
-//        case 17:
-//            buttonName = "Rhianna"
-//        case 18:
-//            buttonName = "IKEA"
-//        case 19:
-//            buttonName = "Starbucks"
-//        case 20:
-//            buttonName = "lexus"
-//        case 21:
-//            buttonName = "AMC"
-//        case 22:
-//            buttonName = "Louis Vuitton"
-//        default: break
-//        }
-//    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       // MusicHelper.sharedHelper.stopBackgroundMusic()
-        if segue.identifier == "backMain" {
-            var DestViewController : SecondScreen = segue.destination as! SecondScreen
-            // doSomething(sender as! UIButton)
-            // DestViewController.passedName = buttonName
-            // DestViewController.userName = userName
-        }
-        else{
-            let DestViewController : TrialGameScreen = segue.destination as! TrialGameScreen
-                        DestViewController.userName = userName
-        }
-        //performSegueWithIdentifier("threeToGame", sender: self)
-        
-    }
-    
-}
-*/
