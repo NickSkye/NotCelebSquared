@@ -44,6 +44,7 @@ class DailyFreeContestScreen: UIViewController, UITableViewDelegate, UITableView
         tableView.dataSource = self
         self.tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 65))
         self.tableView.tableHeaderView?.backgroundColor = UIColor(red: 175/255, green: 31/255, blue: 0/255, alpha: 1)
+        self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 64, 0)
         
         ///////////////////////////////////////////////////////////////////////////////////
         ///////////////////BACK BUTTON////////////////////////////////////////////////////
@@ -90,12 +91,14 @@ class DailyFreeContestScreen: UIViewController, UITableViewDelegate, UITableView
                                 self.imgURLArray.append(name as! String)
                             }
                             
-                            OperationQueue.main.addOperation ({
-                                self.tableView.reloadData()
-                            })
+                            
                         }
                     }
+                    OperationQueue.main.addOperation ({
+                        self.tableView.reloadData()
+                    })
                 }
+                
             }
             
         }).resume()
