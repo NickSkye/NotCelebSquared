@@ -15,6 +15,7 @@ class TrialGameScreen: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var csLogo: UIImageView!
     
+    var cellTapped = 0
 //    var timer = NSTimer()
 //    var count = 10.00
     var userName = ""
@@ -30,7 +31,9 @@ class TrialGameScreen: UIViewController {
     
                
         picture.image = UIImage(named: passedName)!
+        print(cellTapped)
         nameLabel.text = passedName
+        
     }
   
 //    -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -54,7 +57,7 @@ class TrialGameScreen: UIViewController {
         DestViewController.userName = userName
         }
         if segue.identifier == "backChooser" {
-            let DestViewController : ThirdScreen = segue.destination as! ThirdScreen
+            let DestViewController : SecondScreen = segue.destination as! SecondScreen
             DestViewController.userName = userName
         }
         //performSegueWithIdentifier("threeToGame", sender: self)

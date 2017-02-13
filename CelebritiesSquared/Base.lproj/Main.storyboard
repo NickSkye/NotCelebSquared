@@ -1332,9 +1332,9 @@
                                     <constraint firstAttribute="height" constant="57" id="1oY-FY-pMR"/>
                                     <constraint firstAttribute="width" constant="274" id="lIa-5A-otc"/>
                                 </constraints>
-                                <state key="normal" image="Contest_Lobby"/>
+                                <state key="normal" image="Main_Lobby"/>
                                 <connections>
-                                    <segue destination="Bvb-Py-9eQ" kind="modal" identifier="backChooser" id="HDs-Xg-tvQ"/>
+                                    <segue destination="cF6-pN-pRe" kind="modal" id="PuG-IW-94t"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1373,13 +1373,13 @@
                         <outlet property="csLogo" destination="8yy-1H-aCf" id="lhf-Nt-5hn"/>
                         <outlet property="nameLabel" destination="Jed-4I-vNZ" id="FUf-sI-CrR"/>
                         <outlet property="picture" destination="0Hi-VK-SNw" id="jrS-fS-uaU"/>
-                        <segue destination="cF6-pN-pRe" kind="presentation" id="cP1-bS-LHY"/>
+                        <segue destination="cF6-pN-pRe" kind="presentation" identifier="backChooser" id="cP1-bS-LHY"/>
                         <segue destination="b50-xD-swi" kind="presentation" identifier="timeOut" id="pD4-DZ-KBn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbn-5B-oRI" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2407.2463768115945" y="-762.22826086956525"/>
+            <point key="canvasLocation" x="3017" y="-787"/>
         </scene>
         <!--Contest Over Screen-->
         <scene sceneID="Nbt-4e-YKc">
@@ -1936,6 +1936,10 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DEo-fq-1I6">
                                 <rect key="frame" x="113" y="482" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="e1i-ZD-Ks0"/>
+                                    <constraint firstAttribute="height" constant="40" id="jXx-vN-d7N"/>
+                                </constraints>
                                 <state key="normal" image="Main_Lobby"/>
                                 <connections>
                                     <segue destination="cF6-pN-pRe" kind="presentation" id="wn2-Hg-4JX"/>
@@ -1969,6 +1973,7 @@
                         <constraints>
                             <constraint firstItem="3cU-N6-vRS" firstAttribute="centerY" secondItem="j4g-7h-3A7" secondAttribute="centerY" constant="-248.5" id="0Dj-U0-YMH"/>
                             <constraint firstItem="dhl-Ic-jKr" firstAttribute="centerY" secondItem="j4g-7h-3A7" secondAttribute="centerY" constant="140" id="0kg-dg-L5B"/>
+                            <constraint firstItem="O8w-zd-ydV" firstAttribute="top" secondItem="ZOP-l6-cfY" secondAttribute="bottom" id="0v4-Ev-JOO"/>
                             <constraint firstItem="RtB-Vf-iFG" firstAttribute="centerX" secondItem="j4g-7h-3A7" secondAttribute="centerX" constant="55" id="1qo-sw-cVD"/>
                             <constraint firstItem="E7E-3G-KVU" firstAttribute="centerX" secondItem="j4g-7h-3A7" secondAttribute="centerX" id="4VH-gN-Yom"/>
                             <constraint firstItem="Qn6-y2-tv6" firstAttribute="centerY" secondItem="j4g-7h-3A7" secondAttribute="centerY" constant="29.5" id="5wY-J6-Wk6"/>
@@ -1978,6 +1983,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="E7E-3G-KVU" secondAttribute="trailing" constant="9" id="9ej-3H-Hib"/>
                             <constraint firstItem="e0G-Et-NJb" firstAttribute="centerX" secondItem="j4g-7h-3A7" secondAttribute="centerX" id="BFg-zO-OY3"/>
                             <constraint firstItem="DEo-fq-1I6" firstAttribute="leading" secondItem="j4g-7h-3A7" secondAttribute="leadingMargin" constant="93" id="C9q-qq-Wbh"/>
+                            <constraint firstItem="7Md-CZ-Bud" firstAttribute="top" secondItem="E7E-3G-KVU" secondAttribute="bottom" constant="-60" id="E2h-46-HpU"/>
                             <constraint firstItem="mL5-i8-bMy" firstAttribute="centerY" secondItem="j4g-7h-3A7" secondAttribute="centerY" constant="30" id="I7b-IM-0eF"/>
                             <constraint firstItem="3cU-N6-vRS" firstAttribute="leading" secondItem="j4g-7h-3A7" secondAttribute="leadingMargin" constant="51" id="Ify-kA-7jB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DEo-fq-1I6" secondAttribute="trailing" constant="81" id="KEH-7x-kKP"/>
@@ -1991,6 +1997,7 @@
                             <constraint firstItem="yIm-ri-UuN" firstAttribute="centerX" secondItem="j4g-7h-3A7" secondAttribute="centerX" id="PRo-fi-1bf"/>
                             <constraint firstItem="Qn6-y2-tv6" firstAttribute="centerX" secondItem="j4g-7h-3A7" secondAttribute="centerX" constant="-50" id="Qsp-NE-qBx"/>
                             <constraint firstItem="7Md-CZ-Bud" firstAttribute="centerX" secondItem="j4g-7h-3A7" secondAttribute="centerX" id="RUa-L3-G6B"/>
+                            <constraint firstItem="ZOP-l6-cfY" firstAttribute="top" secondItem="E7E-3G-KVU" secondAttribute="bottom" constant="-1" id="RYZ-PK-ZIF"/>
                             <constraint firstItem="E7E-3G-KVU" firstAttribute="centerY" secondItem="j4g-7h-3A7" secondAttribute="centerY" constant="-90" id="Reh-ho-FH8"/>
                             <constraint firstItem="5Ru-X0-NWc" firstAttribute="leading" secondItem="j4g-7h-3A7" secondAttribute="leadingMargin" id="SOi-LZ-W0A"/>
                             <constraint firstItem="e0G-Et-NJb" firstAttribute="centerY" secondItem="j4g-7h-3A7" secondAttribute="centerY" constant="259.5" id="Shf-DZ-MA9"/>
@@ -2005,6 +2012,7 @@
                             <constraint firstItem="Yhc-0Z-Rab" firstAttribute="centerY" secondItem="j4g-7h-3A7" secondAttribute="centerY" constant="-80" id="aHP-zb-fG7"/>
                             <constraint firstItem="DEo-fq-1I6" firstAttribute="centerX" secondItem="j4g-7h-3A7" secondAttribute="centerX" id="afX-tF-Bv2"/>
                             <constraint firstItem="7Md-CZ-Bud" firstAttribute="top" secondItem="3cU-N6-vRS" secondAttribute="bottom" constant="95" id="c2M-zG-Gzh"/>
+                            <constraint firstItem="DEo-fq-1I6" firstAttribute="top" secondItem="7Md-CZ-Bud" secondAttribute="bottom" constant="3" id="dg2-0V-6eJ"/>
                             <constraint firstItem="Web-Fu-956" firstAttribute="centerY" secondItem="j4g-7h-3A7" secondAttribute="centerY" constant="-24" id="eSj-MX-egc"/>
                             <constraint firstItem="ZOP-l6-cfY" firstAttribute="leading" secondItem="j4g-7h-3A7" secondAttribute="leadingMargin" constant="9" id="eXg-WY-7NX"/>
                             <constraint firstItem="yIm-ri-UuN" firstAttribute="centerY" secondItem="j4g-7h-3A7" secondAttribute="centerY" constant="80" id="efo-ID-MjY"/>
@@ -2016,9 +2024,10 @@
                             <constraint firstItem="ZOP-l6-cfY" firstAttribute="centerX" secondItem="j4g-7h-3A7" secondAttribute="centerX" id="muJ-QA-wVc"/>
                             <constraint firstItem="acJ-mF-wzV" firstAttribute="centerY" secondItem="j4g-7h-3A7" secondAttribute="centerY" constant="-174" id="n96-6G-2py"/>
                             <constraint firstItem="Yhc-0Z-Rab" firstAttribute="centerX" secondItem="j4g-7h-3A7" secondAttribute="centerX" constant="-50" id="nBi-em-R3x"/>
+                            <constraint firstItem="yIm-ri-UuN" firstAttribute="top" secondItem="O8w-zd-ydV" secondAttribute="bottom" id="oeq-5V-hOP"/>
                             <constraint firstItem="1a8-9l-er2" firstAttribute="centerX" secondItem="j4g-7h-3A7" secondAttribute="centerX" id="qZL-m3-vDM"/>
                             <constraint firstItem="sTg-sB-iKh" firstAttribute="centerY" secondItem="j4g-7h-3A7" secondAttribute="centerY" constant="-24" id="sME-8M-gbS"/>
-                            <constraint firstItem="DEo-fq-1I6" firstAttribute="centerY" secondItem="j4g-7h-3A7" secondAttribute="centerY" constant="202" id="tiR-fE-ysh"/>
+                            <constraint firstItem="1a8-9l-er2" firstAttribute="top" secondItem="yIm-ri-UuN" secondAttribute="bottom" constant="-5" id="thO-5H-cZH"/>
                             <constraint firstItem="aXX-r0-c1Y" firstAttribute="centerY" secondItem="j4g-7h-3A7" secondAttribute="centerY" constant="84" id="uDp-hY-oW6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5Ru-X0-NWc" secondAttribute="trailing" constant="236" id="xhR-jW-7Uz"/>
                             <constraint firstItem="Web-Fu-956" firstAttribute="centerX" secondItem="j4g-7h-3A7" secondAttribute="centerX" constant="55" id="yIY-3t-yB7"/>
@@ -2041,7 +2050,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgS-gj-iCQ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4749" y="46"/>
+            <point key="canvasLocation" x="4659" y="46"/>
         </scene>
     </scenes>
     <resources>
@@ -2100,8 +2109,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="pD4-DZ-KBn"/>
         <segue reference="ygB-pH-wdk"/>
-        <segue reference="HDs-Xg-tvQ"/>
-        <segue reference="s0N-7s-Dof"/>
+        <segue reference="cP1-bS-LHY"/>
         <segue reference="IYE-37-beL"/>
         <segue reference="rsc-Me-kpv"/>
     </inferredMetricsTieBreakers>

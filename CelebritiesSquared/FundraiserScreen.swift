@@ -14,7 +14,7 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
     var prizeArray = [String]()
     var imgURLArray = [String]()
     
-    
+    var cellTapped = 0
     var userName = "DICK"
     // cell reuse id (cells that scroll out of view can be reused)
     let cellReuseIdentifier = "cell"
@@ -25,10 +25,14 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 100.0 //change to change row height
+        self.tableView.backgroundColor = UIColor(red: 218/255, green: 165/255, blue: 32/255, alpha: 1)
+
          self.downloadJsonWithURL()
         let label = UILabel(frame: CGRect(x: 0 , y: 0 , width: UIScreen.main.bounds.size.width, height: 50))
         label.center.x = self.view.center.x
         label.text = "Fundraisers"
+        label.textColor = UIColor(red: 218/255, green: 165/255, blue: 32/255, alpha: 1)
+        label.font = UIFont(name: "Copperplate-Bold", size: 26)
         label.textAlignment = .center
         tableView.addSubview(label)
         //tableView.center.x = self.view.center.x
@@ -39,7 +43,7 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 65))
-        self.tableView.tableHeaderView?.backgroundColor = UIColor.red
+        self.tableView.tableHeaderView?.backgroundColor = UIColor(red: 175/255, green: 31/255, blue: 0/255, alpha: 1)
         
         ///////////////////////////////////////////////////////////////////////////////////
         ///////////////////BACK BUTTON////////////////////////////////////////////////////
@@ -48,6 +52,7 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
        // button.backgroundColor = UIColor.blue
         button.setTitle("Back", for: .normal)
+        //button.setTitleColor(<#T##color: UIColor?##UIColor?#>, for: <#T##UIControlState#>)
         button.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         tableView.addSubview(button)
         
@@ -124,13 +129,14 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
         let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
        
         // set the text from the data model
-        
+        cell.backgroundColor = UIColor(red: 218/255, green: 165/255, blue: 32/255, alpha: 1)
         cell.textLabel?.text = nameArray[indexPath.row]
         let imgURL = NSURL(string: imgURLArray[indexPath.row])
        
         if imgURL != nil{
             let data = NSData(contentsOf: (imgURL as? URL)!)
             cell.imageView?.image = UIImage(data: data as! Data)
+            //cell.imageView?.image?.size =
         }
         
         return cell
@@ -139,6 +145,7 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
+        cellTapped = indexPath.row
         self.performSegue(withIdentifier: "fundraiserToGame", sender: self)
     }
     
@@ -157,6 +164,7 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
             //doSomething(sender as! UIButton)
            // DestViewController.passedName = buttonName
             DestViewController.userName = userName
+            DestViewController.cellTapped = cellTapped
         }
         //performSegueWithIdentifier("threeToGame", sender: self)
         
