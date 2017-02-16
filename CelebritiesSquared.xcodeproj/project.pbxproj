@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		414CED151E558DC7002D0779 /* TitleScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414CED141E558DC7002D0779 /* TitleScreenViewController.swift */; };
 		5914DD80D76F10CFD35B77C9 /* Pods_CelebritiesSquared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4330F62452D7414F41787FCB /* Pods_CelebritiesSquared.framework */; };
 		CA978FED1D67EBC9000A917F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA978FEC1D67EBC9000A917F /* AppDelegate.swift */; };
 		CA978FEF1D67EBC9000A917F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA978FEE1D67EBC9000A917F /* ViewController.swift */; };
@@ -60,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		414CED141E558DC7002D0779 /* TitleScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleScreenViewController.swift; sourceTree = "<group>"; };
 		4330F62452D7414F41787FCB /* Pods_CelebritiesSquared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CelebritiesSquared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E2CAC69C41C715187903900 /* Pods-CelebritiesSquared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CelebritiesSquared.release.xcconfig"; path = "Pods/Target Support Files/Pods-CelebritiesSquared/Pods-CelebritiesSquared.release.xcconfig"; sourceTree = "<group>"; };
 		A6D2C84F7A08EA9FC8E9E952 /* Pods-CelebritiesSquared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CelebritiesSquared.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CelebritiesSquared/Pods-CelebritiesSquared.debug.xcconfig"; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				F3F058721E2EE4150000B67C /* RegisterScreen.swift */,
 				F3D31C011E441CA200C82D87 /* FundraiserScreen.swift */,
 				F3D8FF191E51673C00FB668A /* DailyFreeContestScreen.swift */,
+				414CED141E558DC7002D0779 /* TitleScreenViewController.swift */,
 			);
 			path = CelebritiesSquared;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				CA978FED1D67EBC9000A917F /* AppDelegate.swift in Sources */,
 				CA97901B1D67F2A8000A917F /* SecondScreen.swift in Sources */,
 				F3FF2F601D878D5600DB8034 /* contestOverScreen.swift in Sources */,
+				414CED151E558DC7002D0779 /* TitleScreenViewController.swift in Sources */,
 				F30F7C571D84B831007861BA /* ThirdScreen.swift in Sources */,
 				F305F3B51DA5CF0D00B7C299 /* UsernameScreen.swift in Sources */,
 				F3D31C021E441CA200C82D87 /* FundraiserScreen.swift in Sources */,
