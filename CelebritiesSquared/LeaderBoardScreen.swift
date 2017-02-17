@@ -38,7 +38,7 @@ class LeaderBoardScreen: UIViewController {
     
     // @IBOutlet var videoView: UIWebView!
     var totalScore = Double()
-    var userName = ""
+    var email = ""
     var orderedArray = [String]()
     var finalDict = [String: Double]()
     @IBOutlet var scoreLabel: UILabel!
@@ -96,18 +96,18 @@ class LeaderBoardScreen: UIViewController {
         }
         
         }
-        if leaderDict[userName] != nil {
-            if totalScore > leaderDict[userName] {
-                leaderDict[userName] = totalScore
-                userDefaults.setValue(totalScore, forKey: userName)
+        if leaderDict[email] != nil {
+            if totalScore > leaderDict[email] {
+                leaderDict[email] = totalScore
+                userDefaults.setValue(totalScore, forKey: email)
                 userDefaults.synchronize() // don't forget this!!!!
             }
             
         }
         else{
-            userDefaults.setValue(totalScore, forKey: userName)
+            userDefaults.setValue(totalScore, forKey: email)
             userDefaults.synchronize() // don't forget this!!!!
-            leaderDict[userName] = totalScore
+            leaderDict[email] = totalScore
         }
         
         var count = 0

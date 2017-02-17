@@ -15,7 +15,7 @@ class ContestOverScreen: UIViewController {
     @IBOutlet var videoView: UIWebView!
     //var timer = NSTimer()
     var count = 10.00
-    var userName = ""
+    var email = ""
     var delayTimes:[Int] = [9, 15, 8, 8, 17, 13, 24, 10, 30, 38]
     
     @IBOutlet var answerButt: UIButton!
@@ -132,7 +132,7 @@ class ContestOverScreen: UIViewController {
             DestViewController.passedName = passedName
             DestViewController.totalScore = totalScore
             DestViewController.videoCount = videoCount
-            DestViewController.userName = userName
+            DestViewController.email = email
             videoView.loadHTMLString("", baseURL: nil)
             
             

@@ -18,7 +18,7 @@ class TrialGameScreen: UIViewController {
     var cellTapped = 0
 //    var timer = NSTimer()
 //    var count = 10.00
-    var userName = ""
+    var email = ""
     var totalScore = Double()
     var passedName = "Fundraiser"
     override func viewDidLoad() {
@@ -54,11 +54,11 @@ class TrialGameScreen: UIViewController {
        // doSomething(sender as! UIButton)
         DestViewController.passedName = passedName
         DestViewController.totalScore = totalScore
-        DestViewController.userName = userName
+        DestViewController.email = email
         }
         if segue.identifier == "backChooser" {
             let DestViewController : SecondScreen = segue.destination as! SecondScreen
-            DestViewController.userName = userName
+            DestViewController.email = email
         }
         //performSegueWithIdentifier("threeToGame", sender: self)
         

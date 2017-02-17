@@ -18,7 +18,7 @@ class AnswerScreen: UIViewController {
     
     var timer = Timer()
     var count = 10.00
-    var userName = ""
+    var email = ""
     var totalScore = Double()
     @IBOutlet var timerLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
@@ -193,7 +193,7 @@ class AnswerScreen: UIViewController {
             DestViewController.passedAnswerBool = false
             DestViewController.videoCount = videoCount
             DestViewController.totalScore = totalScore
-            DestViewController.userName = userName
+            DestViewController.email = email
         }
         else if segue.identifier != correctAnswerSegue {
             let DestViewController : AfterAnswer = segue.destination as! AfterAnswer
@@ -202,7 +202,7 @@ class AnswerScreen: UIViewController {
             DestViewController.passedAnswerBool = false
             DestViewController.videoCount = videoCount
             DestViewController.totalScore = totalScore
-            DestViewController.userName = userName
+            DestViewController.email = email
         }
         else if segue.identifier == correctAnswerSegue {
             let DestViewController : AfterAnswer = segue.destination as! AfterAnswer
@@ -212,7 +212,7 @@ class AnswerScreen: UIViewController {
             totalScore += count
             DestViewController.totalScore = totalScore
             DestViewController.videoCount = videoCount
-            DestViewController.userName = userName
+            DestViewController.email = email
         }
     }
     

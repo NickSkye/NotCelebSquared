@@ -24,7 +24,7 @@ class AfterAnswer: UIViewController {
     
     @IBOutlet var timeLabel: UILabel!
  //   @IBOutlet var timerLabel: UILabel!
-    var userName = ""
+    var email = ""
   //  @IBOutlet var scoreLabel: UILabel!
     var totalScore = Double()
  //   @IBOutlet var nameLabel: UILabel!
@@ -97,7 +97,7 @@ class AfterAnswer: UIViewController {
             let DestViewController : LeaderBoardScreen = segue.destination as! LeaderBoardScreen
             // doSomething(sender as! UIButton)
             DestViewController.totalScore = totalScore
-            DestViewController.userName = userName
+            DestViewController.email = email
             //videoView.loadHTMLString("", baseURL: nil)
             
         }
@@ -105,7 +105,7 @@ class AfterAnswer: UIViewController {
             let DestViewController : ContestOverScreen = segue.destination as! ContestOverScreen
             DestViewController.videoCount = videoCount
             DestViewController.totalScore = totalScore
-            DestViewController.userName = userName
+            DestViewController.email = email
           //  videoView.loadHTMLString("", baseURL: nil)
         }
     }

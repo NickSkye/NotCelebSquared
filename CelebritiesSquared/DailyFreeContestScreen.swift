@@ -15,7 +15,7 @@ class DailyFreeContestScreen: UIViewController, UITableViewDelegate, UITableView
     var imgURLArray = [String]()
     
     var cellTapped = 0
-    var userName = "DICK"
+    var email = "DICK"
     // cell reuse id (cells that scroll out of view can be reused)
     let cellReuseIdentifier = "cell"
     
@@ -160,13 +160,13 @@ class DailyFreeContestScreen: UIViewController, UITableViewDelegate, UITableView
             var DestViewController : SecondScreen = segue.destination as! SecondScreen
             // doSomething(sender as! UIButton)
             // DestViewController.passedName = buttonName
-            DestViewController.userName = userName
+            DestViewController.email = email
         }
         else{
             let DestViewController : TrialGameScreen = segue.destination as! TrialGameScreen
             //doSomething(sender as! UIButton)
             // DestViewController.passedName = buttonName
-            DestViewController.userName = userName
+            DestViewController.email = email
             DestViewController.cellTapped = cellTapped
         }
         //performSegueWithIdentifier("threeToGame", sender: self)

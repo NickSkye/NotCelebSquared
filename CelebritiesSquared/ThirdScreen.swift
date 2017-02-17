@@ -13,7 +13,7 @@ class ThirdScreen: UITableViewController {
     
     @IBOutlet var contestLabel: UILabel!
     var buttonName = ""
-    var userName = ""
+    var email = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,7 +26,7 @@ class ThirdScreen: UITableViewController {
         let date = Date()
         let calendar = Calendar.current
         let components = (calendar as NSCalendar).components([.day , .month , .year], from: date)
-        print(userName)
+        print(email)
         let year =  components.year!
         let month = components.month!
         let day = components.day!
@@ -99,13 +99,13 @@ class ThirdScreen: UITableViewController {
             var DestViewController : SecondScreen = segue.destination as! SecondScreen
            // doSomething(sender as! UIButton)
            // DestViewController.passedName = buttonName
-           // DestViewController.userName = userName
+           DestViewController.email = email
         }
         else{
         let DestViewController : TrialGameScreen = segue.destination as! TrialGameScreen
         doSomething(sender as! UIButton)
         DestViewController.passedName = buttonName
-        DestViewController.userName = userName
+        DestViewController.email = email
         }
         //performSegueWithIdentifier("threeToGame", sender: self)
         

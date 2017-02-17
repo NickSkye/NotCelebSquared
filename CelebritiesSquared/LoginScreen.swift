@@ -17,7 +17,7 @@ class LoginScreen: UIViewController {
     
     var responseString = ""
     var allowed = false
-    
+    var email : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,7 +32,7 @@ class LoginScreen: UIViewController {
     
     func postToServerFunction(){
         //Contingency Handling. Error handling etc.
-        var email : String = emailField.text!
+        email = emailField.text!
         var password : String = passwordField.text!
         
         
@@ -109,7 +109,7 @@ class LoginScreen: UIViewController {
             let DestViewController : SecondScreen = segue.destination as! SecondScreen
             // doSomething(sender as! UIButton)
             
-            //DestViewController.email = email.text!
+            DestViewController.email = email
         }
         
 }

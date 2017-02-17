@@ -18,7 +18,7 @@ class RegisterScreen: UIViewController {
     @IBOutlet var emailField: UITextField!
     var responseString = ""
     var allowed = false
-    
+    var email : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,7 +32,7 @@ class RegisterScreen: UIViewController {
         var lastName : String = last.text!
         var password : String = passwordField.text!
         var confirmPassword : String = confirmPasswordField.text!
-        var email : String = emailField.text!
+        email = emailField.text!
         
         if(password == confirmPassword){
             var request = URLRequest(url: URL(string: "http://dev.celebritiessquared.com/CSPhp/Register.php")!)
@@ -117,7 +117,7 @@ class RegisterScreen: UIViewController {
             let DestViewController : SecondScreen = segue.destination as! SecondScreen
             // doSomething(sender as! UIButton)
             
-            //DestViewController.userName = usernameField.text!
+            DestViewController.email = email
         }
         
     }

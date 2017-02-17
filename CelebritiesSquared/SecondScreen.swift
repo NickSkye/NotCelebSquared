@@ -21,14 +21,14 @@ class SecondScreen: UIViewController {
 //       self.presentViewController(alert, animated: true, completion: nil)
 //
 //    }
-    var userName = ""
+    var email = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 //        var Alert:UIAlertView = UIAlertView(title: "Test", message: ", delegate: self, cancelButtonTitle: "OK")
 //        Alert.show()
         //1. Create the alert controller.
-        print("User" + userName)
+        print("User" + email)
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,7 +38,7 @@ class SecondScreen: UIViewController {
     
     
     @IBAction func logoutButt(_ sender: Any) {
-        userName = ""
+        email = ""
     }
     
     
@@ -103,12 +103,12 @@ class SecondScreen: UIViewController {
         if segue.identifier == "contestLobbySegue" {
             let DestViewController : ThirdScreen = segue.destination as! ThirdScreen
             // doSomething(sender as! UIButton)
-            DestViewController.userName = userName
+            DestViewController.email = email
             
         }
         else if segue.identifier == "fundraiserLobbySegue" {
             let DestViewController : FundraiserScreen = segue.destination as! FundraiserScreen
-            DestViewController.userName = userName
+            DestViewController.email = email
         }
         
     }

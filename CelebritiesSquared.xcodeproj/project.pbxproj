@@ -19,7 +19,6 @@
 		CA97901B1D67F2A8000A917F /* SecondScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA97901A1D67F2A8000A917F /* SecondScreen.swift */; };
 		F305F3B11DA2EEBF00B7C299 /* LeaderBoardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F305F3B01DA2EEBF00B7C299 /* LeaderBoardScreen.swift */; };
 		F305F3B31DA55ECB00B7C299 /* TvQualifierScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F305F3B21DA55ECB00B7C299 /* TvQualifierScreen.swift */; };
-		F305F3B51DA5CF0D00B7C299 /* UsernameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F305F3B41DA5CF0D00B7C299 /* UsernameScreen.swift */; };
 		F30F7C571D84B831007861BA /* ThirdScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F7C561D84B831007861BA /* ThirdScreen.swift */; };
 		F30F7C591D861F3A007861BA /* FourthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F7C581D861F3A007861BA /* FourthScreen.swift */; };
 		F30F7C5B1D861F69007861BA /* FifthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F7C5A1D861F69007861BA /* FifthScreen.swift */; };
@@ -81,7 +80,6 @@
 		CA97901A1D67F2A8000A917F /* SecondScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondScreen.swift; sourceTree = "<group>"; };
 		F305F3B01DA2EEBF00B7C299 /* LeaderBoardScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderBoardScreen.swift; sourceTree = "<group>"; };
 		F305F3B21DA55ECB00B7C299 /* TvQualifierScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvQualifierScreen.swift; sourceTree = "<group>"; };
-		F305F3B41DA5CF0D00B7C299 /* UsernameScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsernameScreen.swift; sourceTree = "<group>"; };
 		F30F7C561D84B831007861BA /* ThirdScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdScreen.swift; sourceTree = "<group>"; };
 		F30F7C581D861F3A007861BA /* FourthScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthScreen.swift; sourceTree = "<group>"; };
 		F30F7C5A1D861F69007861BA /* FifthScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthScreen.swift; sourceTree = "<group>"; };
@@ -204,7 +202,6 @@
 				F3F8C8C91D9AEE8100CD7244 /* WhatToWorkOnNow */,
 				F305F3B01DA2EEBF00B7C299 /* LeaderBoardScreen.swift */,
 				F305F3B21DA55ECB00B7C299 /* TvQualifierScreen.swift */,
-				F305F3B41DA5CF0D00B7C299 /* UsernameScreen.swift */,
 				F3F022331DAB0BF50036FE88 /* MusicHelper.swift */,
 				F3F058701E2EE3D40000B67C /* LoginScreen.swift */,
 				F3F058721E2EE4150000B67C /* RegisterScreen.swift */,
@@ -435,7 +432,6 @@
 				F3FF2F601D878D5600DB8034 /* contestOverScreen.swift in Sources */,
 				414CED151E558DC7002D0779 /* TitleScreenViewController.swift in Sources */,
 				F30F7C571D84B831007861BA /* ThirdScreen.swift in Sources */,
-				F305F3B51DA5CF0D00B7C299 /* UsernameScreen.swift in Sources */,
 				F3D31C021E441CA200C82D87 /* FundraiserScreen.swift in Sources */,
 				F3F022341DAB0BF50036FE88 /* MusicHelper.swift in Sources */,
 				F3F058711E2EE3D40000B67C /* LoginScreen.swift in Sources */,
