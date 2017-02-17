@@ -12,21 +12,10 @@ import UIKit
 class RegisterScreen: UIViewController {
     
     @IBOutlet var first: UITextField!
-    
     @IBOutlet var last: UITextField!
-    
-    
-    @IBOutlet var usernameField: UITextField!
-    
     @IBOutlet var passwordField: UITextField!
-    
-    
     @IBOutlet var confirmPasswordField: UITextField!
-     
-    
     @IBOutlet var emailField: UITextField!
-    
-    @IBOutlet var phoneField: UITextField!
     var responseString = ""
     var allowed = false
     
@@ -41,13 +30,9 @@ class RegisterScreen: UIViewController {
         //Contingency Handling. Error handling etc.
         var firstName : String = first.text!
         var lastName : String = last.text!
-        var username : String = usernameField.text!
         var password : String = passwordField.text!
         var confirmPassword : String = confirmPasswordField.text!
         var email : String = emailField.text!
-        var phoneNumber : String = phoneField.text!
-        
-        
         
         if(password == confirmPassword){
             var request = URLRequest(url: URL(string: "http://dev.celebritiessquared.com/CSPhp/Register.php")!)
@@ -55,7 +40,7 @@ class RegisterScreen: UIViewController {
             request.httpMethod = "POST"
             
             var postString: String!
-            postString = "first=\(firstName)&last=\(lastName)&username=\(username)&password=\(password)&email=\(email)"
+            postString = "first=\(firstName)&last=\(lastName)&email=\(email)&password=\(password)"
             request.httpBody = postString.data(using: String.Encoding.utf8)
             
             
@@ -132,7 +117,7 @@ class RegisterScreen: UIViewController {
             let DestViewController : SecondScreen = segue.destination as! SecondScreen
             // doSomething(sender as! UIButton)
             
-            DestViewController.userName = usernameField.text!
+            //DestViewController.userName = usernameField.text!
         }
         
     }

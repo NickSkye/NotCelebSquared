@@ -11,9 +11,7 @@ import UIKit
 
 class LoginScreen: UIViewController {
     
-    
-    
-    @IBOutlet var usernameField: UITextField!
+    @IBOutlet var emailField: UITextField!
     
     @IBOutlet var passwordField: UITextField!
     
@@ -34,7 +32,7 @@ class LoginScreen: UIViewController {
     
     func postToServerFunction(){
         //Contingency Handling. Error handling etc.
-        var username : String = usernameField.text!
+        var email : String = emailField.text!
         var password : String = passwordField.text!
         
         
@@ -43,7 +41,7 @@ class LoginScreen: UIViewController {
         request.httpMethod = "POST"
         
         var postString: String!
-        postString = "username=\(username)&password=\(password)"
+        postString = "email=\(email)&password=\(password)"
         request.httpBody = postString.data(using: String.Encoding.utf8)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -93,7 +91,7 @@ class LoginScreen: UIViewController {
             }
             else {
                 
-                let alert=UIAlertController(title: "Oops!", message: "Username or Password is incorrect", preferredStyle: UIAlertControllerStyle.alert);
+                let alert=UIAlertController(title: "Oops!", message: "Email or Password is incorrect", preferredStyle: UIAlertControllerStyle.alert);
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil));
                 //show it
                 self.show(alert, sender: self);
@@ -111,7 +109,7 @@ class LoginScreen: UIViewController {
             let DestViewController : SecondScreen = segue.destination as! SecondScreen
             // doSomething(sender as! UIButton)
             
-            DestViewController.userName = usernameField.text!
+            //DestViewController.email = email.text!
         }
         
 }
