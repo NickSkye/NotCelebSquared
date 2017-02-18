@@ -416,156 +416,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Celebrities_squared" translatesAutoresizingMaskIntoConstraints="NO" id="Ltf-UH-5nl">
-                                <rect key="frame" x="-181" y="0.0" width="947" height="738"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LobbyBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Ltf-UH-5nl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQT-sc-Ce3">
-                                <rect key="frame" x="129" y="293" width="378" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="HiM-dT-h0d"/>
-                                    <constraint firstAttribute="width" constant="787" id="xYc-mb-W6H"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQT-sc-Ce3">
+                                <rect key="frame" x="0.0" y="208" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Daily_Free_Contest"/>
                                 <connections>
                                     <action selector="tvQualifier:" destination="cF6-pN-pRe" eventType="touchUpInside" id="efG-UH-Thu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmU-ql-I0w">
-                                <rect key="frame" x="156" y="346" width="378" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="VEV-w8-gLU"/>
-                                    <constraint firstAttribute="width" constant="290" id="prc-EM-vi3"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmU-ql-I0w">
+                                <rect key="frame" x="0.0" y="262" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="How_To_Play"/>
                                 <connections>
                                     <action selector="instructionButt:" destination="cF6-pN-pRe" eventType="touchUpInside" id="Cun-n1-zmr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nai-KE-V3I">
-                                <rect key="frame" x="171" y="446" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="NgF-E8-ciA"/>
-                                    <constraint firstAttribute="width" constant="60" id="Rib-kn-de7"/>
-                                    <constraint firstAttribute="height" constant="60" id="hAa-3g-Vv6"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="oUb-0C-OD2"/>
-                                </constraints>
-                                <state key="normal" image="facebook-logo-png-transparent-background"/>
-                                <connections>
-                                    <action selector="facebookButton:" destination="cF6-pN-pRe" eventType="touchUpInside" id="VVD-n7-EwJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSQ-Tj-Eit">
-                                <rect key="frame" x="271" y="446" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Nyi-Qa-m2V"/>
-                                    <constraint firstAttribute="width" constant="60" id="aWy-D8-qS3"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSQ-Tj-Eit">
+                                <rect key="frame" x="90" y="430" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Instagram_App_Large_May2016_200"/>
                                 <connections>
                                     <action selector="instagramButton:" destination="cF6-pN-pRe" eventType="touchUpInside" id="DAa-1e-UJ9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9L-Dx-Ytx">
-                                <rect key="frame" x="372" y="446" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="ib8-qS-Yk4"/>
-                                    <constraint firstAttribute="height" constant="60" id="xmx-Ni-TFx"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9L-Dx-Ytx">
+                                <rect key="frame" x="165" y="430" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Twitter Logo"/>
                                 <connections>
                                     <action selector="twitterButton:" destination="cF6-pN-pRe" eventType="touchUpInside" id="a42-iB-xSf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y72-SR-5b2">
-                                <rect key="frame" x="446" y="446" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="7ZT-9T-Yuc"/>
-                                    <constraint firstAttribute="height" constant="60" id="Ex6-V6-Jep"/>
-                                </constraints>
-                                <state key="normal" image="Snapchat_Logo"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCe-Kv-lRs">
-                                <rect key="frame" x="57" y="708" width="300" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCe-Kv-lRs">
+                                <rect key="frame" x="124" y="538" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Disclaimer"/>
                                 <connections>
                                     <action selector="disclaimerButton:" destination="cF6-pN-pRe" eventType="touchUpInside" id="mi2-Vj-OXT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdE-qK-lDd">
-                                <rect key="frame" x="129" y="240" width="378" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="9hd-ff-9Vt"/>
-                                    <constraint firstAttribute="height" constant="45" id="eeX-Q2-aqg"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdE-qK-lDd">
+                                <rect key="frame" x="0.0" y="156" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Contest_Lobby"/>
                                 <connections>
                                     <action selector="contestButt:" destination="cF6-pN-pRe" eventType="touchUpInside" id="igE-Py-cGp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqY-6B-pG9">
-                                <rect key="frame" x="133" y="188" width="378" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Owu-YS-A8t"/>
-                                    <constraint firstAttribute="width" constant="200" id="fP6-in-HzW"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqY-6B-pG9">
+                                <rect key="frame" x="0.0" y="102" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Fundraise_Contest"/>
                                 <connections>
                                     <action selector="fundraiserButt:" destination="cF6-pN-pRe" eventType="touchUpInside" id="KrR-hB-bzp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTy-oi-M4o">
-                                <rect key="frame" x="128" y="670" width="158" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTy-oi-M4o">
+                                <rect key="frame" x="136" y="500" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
                                     <action selector="logoutButt:" destination="cF6-pN-pRe" eventType="touchUpInside" id="Qth-nY-LEo"/>
                                     <segue destination="HKI-vW-IvW" kind="presentation" id="hIE-fA-LV0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nai-KE-V3I">
+                                <rect key="frame" x="16" y="430" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="facebook-logo-png-transparent-background"/>
+                                <connections>
+                                    <action selector="facebookButton:" destination="cF6-pN-pRe" eventType="touchUpInside" id="VVD-n7-EwJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y72-SR-5b2">
+                                <rect key="frame" x="244" y="430" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Snapchat_Logo"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="c9L-Dx-Ytx" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="3fD-cI-d57"/>
-                            <constraint firstItem="Nai-KE-V3I" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" constant="-100" id="48A-RU-Ybt"/>
-                            <constraint firstItem="HqY-6B-pG9" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="7ZD-2M-9S4"/>
-                            <constraint firstItem="Nai-KE-V3I" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="9Ob-va-w2b"/>
-                            <constraint firstItem="Ltf-UH-5nl" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="B2y-kK-YY2"/>
-                            <constraint firstItem="0yO-wI-KdZ" firstAttribute="top" secondItem="oCe-Kv-lRs" secondAttribute="bottom" id="B4F-0g-6sv"/>
-                            <constraint firstItem="c9L-Dx-Ytx" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" constant="50" id="B7y-Fn-Mb7"/>
-                            <constraint firstItem="HqY-6B-pG9" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="BAe-G5-ef4"/>
-                            <constraint firstItem="c9L-Dx-Ytx" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="CBD-gZ-jiY"/>
-                            <constraint firstItem="HqY-6B-pG9" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="CCK-OZ-HTc"/>
-                            <constraint firstItem="0yO-wI-KdZ" firstAttribute="top" secondItem="oCe-Kv-lRs" secondAttribute="bottom" id="EtV-Ad-iar"/>
-                            <constraint firstItem="Nai-KE-V3I" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="J7d-zk-Z90"/>
-                            <constraint firstItem="VmU-ql-I0w" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="KTQ-9p-S2F"/>
-                            <constraint firstItem="vdE-qK-lDd" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="-105.5" id="MXt-Ab-PAC"/>
-                            <constraint firstItem="tQT-sc-Ce3" firstAttribute="leading" secondItem="anN-AL-Z8D" secondAttribute="leadingMargin" constant="109" id="NJM-9g-GYG"/>
-                            <constraint firstItem="GTy-oi-M4o" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="ONP-f2-0GZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HqY-6B-pG9" secondAttribute="trailing" constant="-117" id="Op1-Q3-OFm"/>
-                            <constraint firstItem="HqY-6B-pG9" firstAttribute="leading" secondItem="anN-AL-Z8D" secondAttribute="leadingMargin" constant="50" id="QCt-DQ-gZJ"/>
-                            <constraint firstItem="tQT-sc-Ce3" firstAttribute="leading" secondItem="anN-AL-Z8D" secondAttribute="leadingMargin" constant="50" id="R24-Kp-EhB"/>
-                            <constraint firstItem="RSQ-Tj-Eit" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="RCX-sr-TI6"/>
-                            <constraint firstItem="HqY-6B-pG9" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="-160" id="TXm-Yq-qkF"/>
-                            <constraint firstItem="tQT-sc-Ce3" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="UV4-Pc-9hz"/>
-                            <constraint firstItem="Ltf-UH-5nl" firstAttribute="width" secondItem="anN-AL-Z8D" secondAttribute="width" id="VxX-zF-mCc"/>
-                            <constraint firstItem="tQT-sc-Ce3" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="-52.5" id="YNi-Ag-u4j"/>
-                            <constraint firstItem="VmU-ql-I0w" firstAttribute="leading" secondItem="anN-AL-Z8D" secondAttribute="leadingMargin" constant="50" id="crw-PH-JJl"/>
-                            <constraint firstItem="vdE-qK-lDd" firstAttribute="leading" secondItem="anN-AL-Z8D" secondAttribute="leadingMargin" constant="50" id="e6e-bt-53J"/>
-                            <constraint firstItem="Ltf-UH-5nl" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" id="lCx-qN-CIg"/>
-                            <constraint firstItem="VmU-ql-I0w" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" id="mWf-Ei-z1y"/>
-                            <constraint firstItem="vdE-qK-lDd" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="nPo-u0-FBz"/>
-                            <constraint firstItem="c9L-Dx-Ytx" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" constant="35" id="oEa-va-9Dq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vdE-qK-lDd" secondAttribute="trailing" constant="-50" id="oZ2-u8-x8W"/>
-                            <constraint firstItem="Nai-KE-V3I" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" constant="-70" id="pNb-Ll-Weg"/>
-                            <constraint firstItem="oCe-Kv-lRs" firstAttribute="top" secondItem="GTy-oi-M4o" secondAttribute="bottom" constant="8" id="pl0-hZ-5iS"/>
-                            <constraint firstItem="y72-SR-5b2" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" constant="100" id="rbf-bb-0Ew"/>
-                            <constraint firstItem="y72-SR-5b2" firstAttribute="centerY" secondItem="anN-AL-Z8D" secondAttribute="centerY" constant="176" id="s6M-ae-eZO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tQT-sc-Ce3" secondAttribute="trailing" constant="-522" id="saG-Cd-Jrz"/>
-                            <constraint firstItem="Ltf-UH-5nl" firstAttribute="height" secondItem="anN-AL-Z8D" secondAttribute="height" id="tQc-DR-Vtp"/>
-                            <constraint firstItem="RSQ-Tj-Eit" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" constant="-30" id="wO6-ga-9W5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VmU-ql-I0w" secondAttribute="trailing" constant="-52" id="xbz-wC-ZXq"/>
-                            <constraint firstItem="oCe-Kv-lRs" firstAttribute="centerX" secondItem="anN-AL-Z8D" secondAttribute="centerX" id="zFt-8a-42K"/>
-                        </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <segue destination="Bvb-Py-9eQ" kind="modal" identifier="contestLobbySegue" id="mO6-CL-4ta"/>
@@ -575,7 +513,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qC6-L4-gtc" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1023.1884057971015" y="-1119.2934782608697"/>
+            <point key="canvasLocation" x="-1023.75" y="-1119.7183098591549"/>
         </scene>
         <!--Daily Free Contest Screen-->
         <scene sceneID="bnf-zD-k2D">
@@ -2167,6 +2105,7 @@
         <image name="IKEA" width="340" height="255"/>
         <image name="Instagram_App_Large_May2016_200" width="200" height="200"/>
         <image name="KimKardashian" width="214" height="334"/>
+        <image name="LobbyBackground" width="2048" height="2732"/>
         <image name="LoginButton" width="880" height="200"/>
         <image name="LoginScreenBackground" width="2048" height="2732"/>
         <image name="LogoCeleb" width="219" height="64"/>
