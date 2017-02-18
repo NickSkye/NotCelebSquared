@@ -110,7 +110,6 @@ class SecondScreen: UIViewController {
             let DestViewController : FundraiserScreen = segue.destination as! FundraiserScreen
             DestViewController.email = email
         }
-        
     }
     
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -44,17 +44,26 @@ class StartScreen: UIViewController {
     }
     
     @IBAction func mainlobbyButton(_ sender: Any) {
+        performSegue(withIdentifier: "mainLobbySegue", sender: self)
     }
     @IBAction func howtoplayButton(_ sender: Any) {
+        performSegue(withIdentifier: "howtoplaySegue", sender: self)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
+        
+        if segue.identifier == "mainLobbySegue"{
+            let DestViewController : SecondScreen = segue.destination as! SecondScreen
+            DestViewController.email = email
+        }
+        else if segue.identifier == "howtoplaySegue"{
+            let DestViewController : HowToPlayScreen = segue.destination as! HowToPlayScreen
+            DestViewController.email = email
+        }
+
+}
+
 
 }

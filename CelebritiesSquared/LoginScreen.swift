@@ -136,6 +136,5 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
             
             DestViewController.email = email
         }
-        
 }
 }

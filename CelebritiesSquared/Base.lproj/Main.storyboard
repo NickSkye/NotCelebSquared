@@ -109,6 +109,48 @@
             </objects>
             <point key="canvasLocation" x="-3494" y="-2066"/>
         </scene>
+        <!--HowToPlay Screen-->
+        <scene sceneID="sYT-S7-nbp">
+            <objects>
+                <viewController title="HowToPlay Screen" id="pWT-As-GIb" customClass="HowToPlayScreen" customModule="CelebritiesSquared" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9rw-Jh-f6C"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Wy-pf-OOh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w5F-NL-4vT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LoginScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="pu0-Zj-Pcy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ComingSoon" translatesAutoresizingMaskIntoConstraints="NO" id="er2-tE-JFs">
+                                <rect key="frame" x="0.0" y="220" width="320" height="181"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mv9-Wo-6xs">
+                                <rect key="frame" x="91" y="452" width="137" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Main Lobby">
+                                    <color key="titleColor" red="0.75294117650000003" green="0.75294117650000003" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="mainlobbyClicked:" destination="pWT-As-GIb" eventType="touchUpInside" id="u60-Ba-KOS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainlobbyButton" destination="mv9-Wo-6xs" id="LZn-SD-zEj"/>
+                        <segue destination="cF6-pN-pRe" kind="presentation" identifier="htpMainLobbySegue" id="c8S-px-373"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KT3-fB-Lhd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2550" y="-2020"/>
+        </scene>
         <!--Start Screen-->
         <scene sceneID="ISC-y6-4pR">
             <objects>
@@ -188,11 +230,12 @@
                         <outlet property="instagramButton" destination="XxC-Uf-u6b" id="iLf-cn-ORY"/>
                         <outlet property="snapchatButton" destination="Hcl-fe-2S2" id="Gqp-MK-bqz"/>
                         <outlet property="twitterButton" destination="cBP-gr-wt5" id="hMA-kb-Cqb"/>
+                        <segue destination="pWT-As-GIb" kind="presentation" identifier="howtoplaySegue" id="Wyz-uB-08P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qz3-dB-uJw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2361" y="-1121"/>
+            <point key="canvasLocation" x="-2550" y="-1120"/>
         </scene>
         <!--Login Screen-->
         <scene sceneID="1tC-V2-La6">
@@ -250,7 +293,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vaD-57-0w2">
                                 <rect key="frame" x="-1" y="451" width="321" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <state key="normal" title="No Account? Click here to register"/>
+                                <state key="normal" title="No Account? Click here to register">
+                                    <color key="titleColor" red="0.75294117650000003" green="0.75294117650000003" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="82m-dZ-Zun" kind="modal" id="bcX-aA-KIT"/>
                                 </connections>
@@ -402,7 +447,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJG-Ln-jE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3356.25" y="-316.90140845070425"/>
+            <point key="canvasLocation" x="-3356" y="-372"/>
         </scene>
         <!--Second Screen-->
         <scene sceneID="ZTe-cJ-4dG">
@@ -513,7 +558,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qC6-L4-gtc" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1023.75" y="-1119.7183098591549"/>
+            <point key="canvasLocation" x="-1523" y="-1120"/>
         </scene>
         <!--Daily Free Contest Screen-->
         <scene sceneID="bnf-zD-k2D">
@@ -571,7 +616,7 @@
                                         <rect key="frame" x="0.0" y="75" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zIp-gj-IoT" id="kYn-FJ-pdA">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Nordstroms" translatesAutoresizingMaskIntoConstraints="NO" id="qUH-KE-eZ8">
@@ -600,7 +645,7 @@
                                         <rect key="frame" x="0.0" y="155" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HrY-Hz-bYO" id="3Bx-GE-sbc">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Michael Kors" translatesAutoresizingMaskIntoConstraints="NO" id="kwR-aR-jqz">
@@ -629,7 +674,7 @@
                                         <rect key="frame" x="0.0" y="235" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LFR-9S-sAW" id="qAP-2e-eke">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Madonna" translatesAutoresizingMaskIntoConstraints="NO" id="AbO-tj-xei">
@@ -658,7 +703,7 @@
                                         <rect key="frame" x="0.0" y="315" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ujA-gO-BSx" id="wYt-p8-0c0">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Yankees" translatesAutoresizingMaskIntoConstraints="NO" id="qV6-jD-zL9">
@@ -687,7 +732,7 @@
                                         <rect key="frame" x="0.0" y="395" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E88-pd-tTf" id="8zx-ZD-32N">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ruths Chris" translatesAutoresizingMaskIntoConstraints="NO" id="7rK-IE-h7M">
@@ -716,7 +761,7 @@
                                         <rect key="frame" x="0.0" y="475" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hsB-zh-dgq" id="PPg-c5-mWq">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Amazon Fire Tablet" translatesAutoresizingMaskIntoConstraints="NO" id="zHT-wn-omF">
@@ -745,7 +790,7 @@
                                         <rect key="frame" x="0.0" y="555" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L1p-gJ-ab0" id="qkb-7O-4WC">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Channing" translatesAutoresizingMaskIntoConstraints="NO" id="tEV-q2-Cc3">
@@ -777,7 +822,7 @@
                                         <rect key="frame" x="0.0" y="635" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aqP-gS-78x" id="eVf-ls-LOM">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="KimKardashian" translatesAutoresizingMaskIntoConstraints="NO" id="PAU-ci-Q2u">
@@ -809,7 +854,7 @@
                                         <rect key="frame" x="0.0" y="715" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GdO-lT-pYQ" id="hhP-2P-LI0">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Play To Win a chance to meet Bon Jovi! Opens at 7:30pm EST 15 Tokens Reserve Your Spot Now" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5P-8U-aWK">
@@ -841,7 +886,7 @@
                                         <rect key="frame" x="0.0" y="795" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N7b-BY-Ax7" id="fV6-wf-nXA">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Blake Shelton" translatesAutoresizingMaskIntoConstraints="NO" id="o9V-SE-Cjk">
@@ -873,7 +918,7 @@
                                         <rect key="frame" x="0.0" y="875" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5XH-Fa-Xt2" id="yB5-CD-wml">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Play for a Gucci Handbag. Open Now!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8h-9v-mGq">
@@ -908,7 +953,7 @@
                                         <rect key="frame" x="0.0" y="955" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h5b-8B-3wX" id="viv-Rm-qrq">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Macy's Gift Card" translatesAutoresizingMaskIntoConstraints="NO" id="7k4-Zd-6j7">
@@ -936,7 +981,7 @@
                                         <rect key="frame" x="0.0" y="1035" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BqG-bQ-GF8" id="9NI-bW-1Am">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Play for a Brand New Range Rover Sport. 2 Tokens Open Now!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajA-wy-Wfb">
@@ -968,7 +1013,7 @@
                                         <rect key="frame" x="0.0" y="1115" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9xW-p6-Cib" id="Spm-Vp-ykU">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Samsung TV 4639.00" translatesAutoresizingMaskIntoConstraints="NO" id="FuX-3K-fyP">
@@ -1000,7 +1045,7 @@
                                         <rect key="frame" x="0.0" y="1195" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MRp-ox-c9p" id="U1i-LE-hm2">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Meet a Celeb" translatesAutoresizingMaskIntoConstraints="NO" id="8wm-JO-hpo">
@@ -1032,7 +1077,7 @@
                                         <rect key="frame" x="0.0" y="1275" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="moc-WE-pu8" id="Z5a-B5-f7j">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bellagio " translatesAutoresizingMaskIntoConstraints="NO" id="P1N-GJ-zRm">
@@ -1064,7 +1109,7 @@
                                         <rect key="frame" x="0.0" y="1355" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ATz-eT-Jic" id="219-Z4-KiT">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rhianna" translatesAutoresizingMaskIntoConstraints="NO" id="eth-ee-j1h">
@@ -1096,7 +1141,7 @@
                                         <rect key="frame" x="0.0" y="1435" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="scA-2I-NYq" id="Dfx-wH-3L2">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IKEA" translatesAutoresizingMaskIntoConstraints="NO" id="tPw-bJ-v3X">
@@ -1124,7 +1169,7 @@
                                         <rect key="frame" x="0.0" y="1515" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yTX-aU-wR7" id="eXh-Ci-9aG">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Starbucks" translatesAutoresizingMaskIntoConstraints="NO" id="cIm-XJ-n0z">
@@ -1152,7 +1197,7 @@
                                         <rect key="frame" x="0.0" y="1595" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ijr-EJ-ywc" id="Dcs-JK-MKi">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lexus" translatesAutoresizingMaskIntoConstraints="NO" id="xEG-FZ-VzM">
@@ -1184,7 +1229,7 @@
                                         <rect key="frame" x="0.0" y="1675" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mRZ-4P-deS" id="Saf-A1-Syk">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AMC" translatesAutoresizingMaskIntoConstraints="NO" id="WlB-iK-aZk">
@@ -1212,7 +1257,7 @@
                                         <rect key="frame" x="0.0" y="1755" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="51c-jf-Y0t" id="eNL-ls-W2B">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Louis Vuitton" translatesAutoresizingMaskIntoConstraints="NO" id="css-Sy-W06">
@@ -1244,7 +1289,7 @@
                                         <rect key="frame" x="0.0" y="1835" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hCJ-6m-GFU" id="MFx-pz-jJl">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POL-Gx-rpv">
@@ -1261,7 +1306,7 @@
                                         <rect key="frame" x="0.0" y="1915" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3d0-x0-zwq" id="oRp-vV-Ima">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYI-Ag-0gT">
@@ -2094,6 +2139,7 @@
         <image name="C_button" width="450" height="450"/>
         <image name="Celebrities_squared" width="2048" height="2732"/>
         <image name="Channing" width="998" height="1024"/>
+        <image name="ComingSoon" width="1500" height="1000"/>
         <image name="Contest_Lobby" width="683" height="192"/>
         <image name="D_button" width="450" height="450"/>
         <image name="Daily_Free_Contest" width="1229" height="192"/>
@@ -2139,10 +2185,10 @@
         <image name="start_now" width="3300" height="750"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hIE-fA-LV0"/>
-        <segue reference="GS3-ib-972"/>
+        <segue reference="QWc-Xb-ZdX"/>
+        <segue reference="c8S-px-373"/>
         <segue reference="qEg-fp-hzK"/>
-        <segue reference="jpN-br-6eI"/>
+        <segue reference="4oM-Xg-bxe"/>
         <segue reference="pD4-DZ-KBn"/>
         <segue reference="rsc-Me-kpv"/>
     </inferredMetricsTieBreakers>
