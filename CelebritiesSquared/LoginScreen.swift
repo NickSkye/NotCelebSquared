@@ -9,26 +9,51 @@
 import Foundation
 import UIKit
 
-class LoginScreen: UIViewController {
+class LoginScreen: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var emailField: UITextField!
-    
     @IBOutlet var passwordField: UITextField!
     
     var responseString = ""
     var allowed = false
+    
     var email : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view, typically from a nib.
+        self.emailField.delegate = self
+        self.passwordField.delegate = self
         
+        //Set color of text fields to Silver to match text
+        let myColor : UIColor = UIColor(red: 192/255, green: 192/255, blue: 192/255, alpha: 1.0)
+        emailField.layer.masksToBounds = true
+        passwordField.layer.masksToBounds = true
+        emailField.layer.borderWidth = 1
+        passwordField.layer.borderWidth = 1
+        emailField.layer.borderColor = myColor.cgColor
+        passwordField.layer.borderColor = myColor.cgColor
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField === emailField {
+            passwordField.becomeFirstResponder()
+        }
+        else if textField === passwordField{
+            passwordField.resignFirstResponder()
+        }
+        else{
+            return false
+        }
+        
+        return true
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     func postToServerFunction(){
         //Contingency Handling. Error handling etc.
@@ -106,7 +131,7 @@ class LoginScreen: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "loginSegue" {
             
-            let DestViewController : SecondScreen = segue.destination as! SecondScreen
+            let DestViewController : StartScreen = segue.destination as! StartScreen
             // doSomething(sender as! UIButton)
             
             DestViewController.email = email

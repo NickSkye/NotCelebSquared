@@ -9,6 +9,7 @@
 import UIKit
 
 class StartScreen: UIViewController {
+    var email = ""
 
     //Social Media button declarations
     @IBOutlet var snapchatButton: UIButton!
@@ -42,6 +43,10 @@ class StartScreen: UIViewController {
         
     }
     
+    @IBAction func mainlobbyButton(_ sender: Any) {
+    }
+    @IBAction func howtoplayButton(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 

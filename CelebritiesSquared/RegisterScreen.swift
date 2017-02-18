@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class RegisterScreen: UIViewController {
+class RegisterScreen: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var first: UITextField!
     @IBOutlet var last: UITextField!
@@ -21,10 +21,39 @@ class RegisterScreen: UIViewController {
     var email : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view, typically from a nib.
+        self.first.delegate = self
+        self.last.delegate = self
+        self.passwordField.delegate = self
+        self.confirmPasswordField.delegate = self
+        self.emailField.delegate = self
         
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField === first{
+            last.becomeFirstResponder()
+        }
+        else if textField === last{
+            emailField.becomeFirstResponder()
+        }
+        else if textField === emailField{
+            passwordField.becomeFirstResponder()
+        }
+        else if textField === passwordField{
+            confirmPasswordField.becomeFirstResponder()
+        }
+        else if textField === confirmPasswordField{
+            confirmPasswordField.resignFirstResponder()
+        }
+        else{
+            return false
+        }
+        
+        return true
+    }
+    
+    
     
     func postToServerFunction(){
         //Contingency Handling. Error handling etc.
@@ -114,7 +143,7 @@ class RegisterScreen: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "registerSegue" {
-            let DestViewController : SecondScreen = segue.destination as! SecondScreen
+            let DestViewController : StartScreen = segue.destination as! StartScreen
             // doSomething(sender as! UIButton)
             
             DestViewController.email = email
