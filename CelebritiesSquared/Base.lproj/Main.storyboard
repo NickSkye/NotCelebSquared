@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bQo-qK-jAa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nyz-fU-57R">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1824,7 +1824,6 @@
                                                     <state key="normal" title="View"/>
                                                     <connections>
                                                         <action selector="viewButton:" destination="bQo-qK-jAa" eventType="touchUpInside" id="h4A-2I-S6h"/>
-                                                        <segue destination="j6Y-qT-Zfe" kind="presentation" identifier="contestscreenSegue" id="IGk-Rt-ixD"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJe-gU-Uxf">
@@ -1852,6 +1851,7 @@
                                             <outlet property="nameLabel" destination="ssn-yR-j7p" id="YWY-dM-Ogd"/>
                                             <outlet property="prizeLabel" destination="DjU-d4-Ihj" id="8Zh-6K-43U"/>
                                             <outlet property="viewButton" destination="OSW-TK-2rE" id="OXB-uY-CdI"/>
+                                            <segue destination="j6Y-qT-Zfe" kind="presentation" identifier="contestscreenSegue" id="BRq-UB-kwh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1903,17 +1903,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="csIconPng"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thermometer" translatesAutoresizingMaskIntoConstraints="NO" id="GLd-eb-Uua" userLabel="Thermometer">
-                                <rect key="frame" x="40" y="220" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r6f-BE-SFC" userLabel="Prize Image">
-                                <rect key="frame" x="40" y="74" width="240" height="128"/>
+                                <rect key="frame" x="40" y="105" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="r6f-BE-SFC" id="Rt7-wJ-iyC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jeg-57-dDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2323,14 +2322,13 @@
         <image name="moreContent" width="359" height="55"/>
         <image name="silverRect" width="2448" height="2448"/>
         <image name="start_now" width="3300" height="750"/>
-        <image name="thermometer" width="400" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="pD4-DZ-KBn"/>
         <segue reference="jpN-br-6eI"/>
-        <segue reference="wSu-4l-XdJ"/>
-        <segue reference="hIE-fA-LV0"/>
-        <segue reference="qEg-fp-hzK"/>
+        <segue reference="VSW-pw-Fum"/>
         <segue reference="rsc-Me-kpv"/>
+        <segue reference="4oM-Xg-bxe"/>
+        <segue reference="qEg-fp-hzK"/>
     </inferredMetricsTieBreakers>
 </document>

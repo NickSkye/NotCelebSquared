@@ -15,6 +15,7 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
     var imgURLArray = [String]()
     var goalArray = [String]()
     var email = ""
+    var contestName = ""
     
     var objects: NSMutableArray!
     
@@ -111,24 +112,21 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
         }
         
         cell.viewButton.tag = indexPath.row
-        cell.viewButton.addTarget(self, action: "viewAction:", for: .touchUpInside)
+        
+
     
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        contestName = self.nameArray[indexPath.row]
         self.performSegue(withIdentifier: "contestscreenSegue", sender: self)
     }
     
-    @IBAction func viewAction(sender: UIButton){
-        //let contestName =
-    }
+
     
-    
- 
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        //MusicHelper.sharedHelper.stopBackgroundMusic()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //MusicHelper.sharedHelper.stopBackgroundMusic()
 //        if segue.identifier == "backFromFund" {
 //            var DestViewController : SecondScreen = segue.destination as! SecondScreen
 //            // doSomething(sender as! UIButton)
@@ -136,14 +134,14 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
 //             DestViewController.email = email
 //        }
 //        else{
-//            let DestViewController : TrialGameScreen = segue.destination as! TrialGameScreen
-//            //doSomething(sender as! UIButton)
-//           // DestViewController.passedName = buttonName
-//            DestViewController.email = email
-//            DestViewController.cellTapped = cellTapped
-//        }
-//        //performSegueWithIdentifier("threeToGame", sender: self)
-//        
-//    }
+        
+        if segue.identifier == "contestscreenSegue"{
+            let DestViewController : ContestScreen = segue.destination as! ContestScreen
+            //doSomething(sender as! UIButton)
+           // DestViewController.passedName = buttonName
+            DestViewController.email = email
+            DestViewController.contestName = contestName
+        }
+    }
 }
 

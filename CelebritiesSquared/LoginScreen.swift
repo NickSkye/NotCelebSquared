@@ -86,7 +86,6 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         }
         checkResponseString()
         task.resume()
-        
     }
     
     ///////////////////
