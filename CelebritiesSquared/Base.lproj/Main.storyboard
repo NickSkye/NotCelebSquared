@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nyz-fU-57R">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bQo-qK-jAa">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1764,23 +1764,120 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ere-e0-jnk">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG_simple" translatesAutoresizingMaskIntoConstraints="NO" id="NqR-Xs-DtM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fc-Q7-4tU">
+                                <rect key="frame" x="130" y="6" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="csIconPng"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="98" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ere-e0-jnk">
+                                <rect key="frame" x="0.0" y="139" width="320" height="429"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="uE7-W4-YAb">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="98" id="w9Y-Tv-K9x" customClass="TableViewCell" customModule="CelebritiesSquared" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="320" height="98"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w9Y-Tv-K9x" id="hRp-qo-rJN">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ContestName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssn-yR-j7p">
+                                                    <rect key="frame" x="8" y="0.0" width="191" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CelebName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84Z-71-wpE">
+                                                    <rect key="frame" x="86" y="22" width="90" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prize" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjU-d4-Ihj">
+                                                    <rect key="frame" x="86" y="46" width="142" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1r-uA-cMn">
+                                                    <rect key="frame" x="86" y="70" width="142" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSW-TK-2rE">
+                                                    <rect key="frame" x="243" y="64" width="63" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="View"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJe-gU-Uxf">
+                                                    <rect key="frame" x="236" y="36" width="70" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wuX-Ub-ncD">
+                                                    <rect key="frame" x="8" y="25" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="XD9-f8-qkR"/>
+                                                        <constraint firstAttribute="width" constant="60" id="qK8-BY-djB"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="celebName" destination="84Z-71-wpE" id="xlg-KQ-HbI"/>
+                                            <outlet property="endLabel" destination="EJe-gU-Uxf" id="WEv-BK-gDO"/>
+                                            <outlet property="goalLabel" destination="n1r-uA-cMn" id="4FT-Fi-Wds"/>
+                                            <outlet property="imageView" destination="wuX-Ub-ncD" id="Bar-Rd-2H8"/>
+                                            <outlet property="nameLabel" destination="ssn-yR-j7p" id="YWY-dM-Ogd"/>
+                                            <outlet property="prizeLabel" destination="DjU-d4-Ihj" id="8Zh-6K-43U"/>
+                                            <outlet property="viewButton" destination="OSW-TK-2rE" id="OXB-uY-CdI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bQo-qK-jAa" id="XtF-kh-MM4"/>
+                                    <outlet property="delegate" destination="bQo-qK-jAa" id="7CT-yL-84Q"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="ere-e0-jnk" id="jX9-C3-Bm8"/>
+                        <outlet property="searchDisplayController" destination="XF6-g3-l5f" id="E2S-FY-RcF"/>
+                        <outlet property="tableView" destination="ere-e0-jnk" id="XrA-qe-GLD"/>
                         <segue destination="hSk-qX-hPs" kind="modal" identifier="fundraiserToGame" id="QWc-Xb-ZdX"/>
                         <segue destination="cF6-pN-pRe" kind="modal" identifier="backFromFund" id="wSu-4l-XdJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kax-6H-2zp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="XF6-g3-l5f">
+                    <connections>
+                        <outlet property="delegate" destination="bQo-qK-jAa" id="lpq-4i-5yX"/>
+                        <outlet property="searchBar" destination="uE7-W4-YAb" id="Nmd-1o-xAc"/>
+                        <outlet property="searchContentsController" destination="bQo-qK-jAa" id="ySr-7U-qM9"/>
+                        <outlet property="searchResultsDataSource" destination="bQo-qK-jAa" id="TAY-mg-H2F"/>
+                        <outlet property="searchResultsDelegate" destination="bQo-qK-jAa" id="oQa-Y8-GMz"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-690" y="-127"/>
+            <point key="canvasLocation" x="-690" y="-127.8169014084507"/>
         </scene>
         <!--After Answer-->
         <scene sceneID="Izl-Rv-G4l">
@@ -2132,7 +2229,7 @@
         <image name="AMC" width="170" height="90"/>
         <image name="A_button" width="450" height="450"/>
         <image name="Amazon Fire Tablet" width="300" height="300"/>
-        <image name="BG_simple" width="1536" height="2048"/>
+        <image name="BG_simple" width="2048" height="2732"/>
         <image name="B_button" width="450" height="450"/>
         <image name="Bellagio " width="144" height="96"/>
         <image name="Blake Shelton" width="115" height="110"/>
@@ -2177,6 +2274,7 @@
         <image name="buttonClear" width="200" height="41"/>
         <image name="buttonClicktoAnswerGreen" width="201" height="40"/>
         <image name="buttonLobby" width="200" height="40"/>
+        <image name="csIconPng" width="525" height="525"/>
         <image name="facebook-logo-png-transparent-background" width="300" height="300"/>
         <image name="glossyBlackBack" width="1600" height="1591"/>
         <image name="goldBorder" width="1200" height="1200"/>
@@ -2187,11 +2285,11 @@
         <image name="start_now" width="3300" height="750"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QWc-Xb-ZdX"/>
-        <segue reference="c8S-px-373"/>
-        <segue reference="gbH-xI-Ns5"/>
-        <segue reference="4oM-Xg-bxe"/>
         <segue reference="pD4-DZ-KBn"/>
+        <segue reference="QWc-Xb-ZdX"/>
+        <segue reference="wSu-4l-XdJ"/>
         <segue reference="rsc-Me-kpv"/>
+        <segue reference="4oM-Xg-bxe"/>
+        <segue reference="gbH-xI-Ns5"/>
     </inferredMetricsTieBreakers>
 </document>
