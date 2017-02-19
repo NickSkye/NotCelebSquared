@@ -11,6 +11,7 @@
 		414CED191E580B9A002D0779 /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414CED181E580B9A002D0779 /* StartScreen.swift */; };
 		418A09FA1E58EDE6005E6846 /* HowToPlayScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A09F91E58EDE6005E6846 /* HowToPlayScreen.swift */; };
 		419F5B561E594460008F393F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419F5B551E594460008F393F /* TableViewCell.swift */; };
+		419F5B581E5987F7008F393F /* ContestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419F5B571E5987F7008F393F /* ContestScreen.swift */; };
 		5914DD80D76F10CFD35B77C9 /* Pods_CelebritiesSquared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4330F62452D7414F41787FCB /* Pods_CelebritiesSquared.framework */; };
 		CA978FED1D67EBC9000A917F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA978FEC1D67EBC9000A917F /* AppDelegate.swift */; };
 		CA978FEF1D67EBC9000A917F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA978FEE1D67EBC9000A917F /* ViewController.swift */; };
@@ -67,6 +68,7 @@
 		414CED181E580B9A002D0779 /* StartScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
 		418A09F91E58EDE6005E6846 /* HowToPlayScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToPlayScreen.swift; sourceTree = "<group>"; };
 		419F5B551E594460008F393F /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		419F5B571E5987F7008F393F /* ContestScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestScreen.swift; sourceTree = "<group>"; };
 		4330F62452D7414F41787FCB /* Pods_CelebritiesSquared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CelebritiesSquared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E2CAC69C41C715187903900 /* Pods-CelebritiesSquared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CelebritiesSquared.release.xcconfig"; path = "Pods/Target Support Files/Pods-CelebritiesSquared/Pods-CelebritiesSquared.release.xcconfig"; sourceTree = "<group>"; };
 		A6D2C84F7A08EA9FC8E9E952 /* Pods-CelebritiesSquared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CelebritiesSquared.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CelebritiesSquared/Pods-CelebritiesSquared.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				CA978FEC1D67EBC9000A917F /* AppDelegate.swift */,
 				CA978FEE1D67EBC9000A917F /* ViewController.swift */,
 				CA978FF01D67EBCC000A917F /* Main.storyboard */,
+				419F5B571E5987F7008F393F /* ContestScreen.swift */,
 				414CED181E580B9A002D0779 /* StartScreen.swift */,
 				418A09F91E58EDE6005E6846 /* HowToPlayScreen.swift */,
 				CA978FF31D67EBCD000A917F /* Assets.xcassets */,
@@ -440,6 +443,7 @@
 				CA97901B1D67F2A8000A917F /* SecondScreen.swift in Sources */,
 				419F5B561E594460008F393F /* TableViewCell.swift in Sources */,
 				F3FF2F601D878D5600DB8034 /* contestOverScreen.swift in Sources */,
+				419F5B581E5987F7008F393F /* ContestScreen.swift in Sources */,
 				414CED151E558DC7002D0779 /* TitleScreenViewController.swift in Sources */,
 				414CED191E580B9A002D0779 /* StartScreen.swift in Sources */,
 				F30F7C571D84B831007861BA /* ThirdScreen.swift in Sources */,

@@ -16,6 +16,8 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
     var goalArray = [String]()
     var email = ""
     
+    var objects: NSMutableArray!
+    
     //Search Bar Declarations
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -100,14 +102,28 @@ class FundraiserScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
         cell.nameLabel.text = nameArray[indexPath.row]
         cell.prizeLabel.text = "Prize: " + prizeArray[indexPath.row]
         cell.goalLabel.text = "Goal: $" + goalArray[indexPath.row]
+        
         let imgURL = NSURL(string: imgURLArray[indexPath.row])
         
         if imgURL != nil{
             let data = NSData(contentsOf: (imgURL as? URL)!)
             cell.imageView!.image = UIImage(data: data as! Data)
         }
+        
+        cell.viewButton.tag = indexPath.row
+        cell.viewButton.addTarget(self, action: "viewAction:", for: .touchUpInside)
+    
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "contestscreenSegue", sender: self)
+    }
+    
+    @IBAction func viewAction(sender: UIButton){
+        //let contestName =
+    }
+    
     
  
     

@@ -1822,6 +1822,10 @@
                                                     <rect key="frame" x="243" y="64" width="63" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="View"/>
+                                                    <connections>
+                                                        <action selector="viewButton:" destination="bQo-qK-jAa" eventType="touchUpInside" id="h4A-2I-S6h"/>
+                                                        <segue destination="j6Y-qT-Zfe" kind="presentation" identifier="contestscreenSegue" id="IGk-Rt-ixD"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJe-gU-Uxf">
                                                     <rect key="frame" x="236" y="36" width="70" height="21"/>
@@ -1862,7 +1866,6 @@
                     <connections>
                         <outlet property="searchDisplayController" destination="XF6-g3-l5f" id="E2S-FY-RcF"/>
                         <outlet property="tableView" destination="ere-e0-jnk" id="XrA-qe-GLD"/>
-                        <segue destination="hSk-qX-hPs" kind="modal" identifier="fundraiserToGame" id="QWc-Xb-ZdX"/>
                         <segue destination="cF6-pN-pRe" kind="modal" identifier="backFromFund" id="wSu-4l-XdJ"/>
                     </connections>
                 </viewController>
@@ -1878,6 +1881,43 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-690" y="-127.8169014084507"/>
+        </scene>
+        <!--ContestScreen-->
+        <scene sceneID="U5J-Ac-Pvv">
+            <objects>
+                <viewController title="ContestScreen" id="j6Y-qT-Zfe" customClass="ContestScreen" customModule="CelebritiesSquared" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="guP-ue-SK7"/>
+                        <viewControllerLayoutGuide type="bottom" id="dj5-RD-3hU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ehC-f7-AYI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG_simple" translatesAutoresizingMaskIntoConstraints="NO" id="Wuh-4g-B1K">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IS-P1-hLI">
+                                <rect key="frame" x="130" y="6" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="csIconPng"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thermometer" translatesAutoresizingMaskIntoConstraints="NO" id="GLd-eb-Uua" userLabel="Thermometer">
+                                <rect key="frame" x="40" y="220" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r6f-BE-SFC" userLabel="Prize Image">
+                                <rect key="frame" x="40" y="74" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jeg-57-dDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-690" y="728.87323943661977"/>
         </scene>
         <!--After Answer-->
         <scene sceneID="Izl-Rv-G4l">
@@ -2283,13 +2323,14 @@
         <image name="moreContent" width="359" height="55"/>
         <image name="silverRect" width="2448" height="2448"/>
         <image name="start_now" width="3300" height="750"/>
+        <image name="thermometer" width="400" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="pD4-DZ-KBn"/>
-        <segue reference="QWc-Xb-ZdX"/>
+        <segue reference="jpN-br-6eI"/>
         <segue reference="wSu-4l-XdJ"/>
+        <segue reference="hIE-fA-LV0"/>
+        <segue reference="qEg-fp-hzK"/>
         <segue reference="rsc-Me-kpv"/>
-        <segue reference="4oM-Xg-bxe"/>
-        <segue reference="gbH-xI-Ns5"/>
     </inferredMetricsTieBreakers>
 </document>
